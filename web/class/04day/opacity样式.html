@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>opacity透明度</title>
+    <!-- 
+        opacity指定元素的透明度
+            opacity作用在某一个元素上时，把元素和里面的内容当作一个整体看待
+            即使里面的元素没有继承opacity，它也和父级有一样的透明度
+            1代表完全不透明
+            0代表完全透明
+
+     -->
+    <style>
+        .div1{
+           
+            background-color: red;
+            opacity: 1;
+        }
+        .div2{
+            
+            background-color: red;
+            opacity: .9;
+        }
+        .div3{
+           
+            background-color: red;
+            opacity: .8;
+        }
+        .div4{
+            
+            background-color: red;
+            opacity: .7;
+        }
+        .div5{
+           
+            background-color: red;
+            opacity: .6;
+        }
+        .div6{
+            
+            background-color: red;
+            opacity: .3;
+        }
+        .div6 .span1{
+           
+            background-color: red;
+            opacity: .9;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <span>你好</span>
+    </div>
+    <div class="div2">
+        <span>你好</span>
+    </div>
+    <div class="div3">
+        <span>你好</span>
+    </div>
+    <div class="div4">
+        <span>你好</span>
+    </div>
+    <div class="div5">
+        <span>你好</span>
+    </div>
+    <div class="div6">
+        <span class="span1">你好</span>
+    </div>
+</body>
+</html>

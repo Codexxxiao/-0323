@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器的使用|单选框</title>
+    <!-- 
+        伪类选择器cheked的使用
+            一般使用在单选框和复选框上面，与label标签合用
+
+        同时可以使用before，after伪元素选择器一起使用
+            搜索引擎不会抓取before,after等伪元素不存在dom树里面
+     -->
+    <style>
+        ul{
+            margin: 100px auto 0;
+            padding: 0;
+            list-style-type: none;
+            width: 200px;
+        }
+        ul li{
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 10px;
+
+        }
+        ul li input[type='radio']{
+            display: none;
+        }
+        ul li label{
+            position: absolute;
+            width: 150px;
+            background-color: sandybrown;
+        }
+        ul li label::before{
+            content: ' ×';
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 20px 0 10px;
+        }
+        ul li input[type='radio']:checked+label::before{
+            content: '√';
+        }
+        ul li input[type='radio']:checked+label{
+            background-color: sienna;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <ul>
+            <li>
+                <input type="radio" name="girl" value="z" id="z"><label for="z">赵丽颖</label>
+            </li>
+            <li>
+                <input type="radio" name="girl" value="d" id="d"><label for="d">迪丽热巴</label>
+            </li>
+            <li>
+                <input type="radio" name="girl" value="l" id="l"><label for="l">刘亦菲</label>
+            </li>
+            <li>
+                <input type="radio" name="girl" value="y" id="y"><label for="y">杨幂</label>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>负margin的使用方法</title>
+     <style>
+         div{
+             display: inline-block;
+             width: 50px;
+             height: 50px;
+             border: 1px solid red;
+         }
+         #div1{
+          /*   
+        当margin-left为负数的时候，元素左移，不保留原来的位置
+        后面的元素一起跟着左移，并不会挤到前面的兄弟元素，而是覆盖
+     */
+             margin-left: 5px;
+             /* 
+             
+              */
+             margin-right: 5px;
+         }
+         #div0{
+             width: 200px;
+             height: 200px;
+             border: 1px solid red;
+         }
+     </style>
+</head>
+<body>
+    <div id="div0">
+    <div></div>
+    
+    <div id="div1"></div>
+    <div></div>
+</div>
+</body>
+</html>

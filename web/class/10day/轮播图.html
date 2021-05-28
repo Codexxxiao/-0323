@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        /* 图片开始 */
+        #banner ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none; 
+            position: absolute;
+        }
+        #banner-img{
+            width: 2920px;
+            top: 0px;
+            left: 0px;
+        }
+        #banner-img::after{
+            content: '';
+            height: 0;
+            display: block;
+            clear: both;
+        }
+        #banner,#banner-img li a img{
+            width: 730px;
+            height: 454px;
+        }
+        #banner{  
+            float: left;
+            width: 730px;
+            overflow: hidden;
+            position: relative;
+        }
+        #banner-img li{
+            float: left;
+            font-size: 0px;
+            box-sizing: border-box;
+        }
+        #banner-img li a{
+            display: block;
+        }
+        /* 图片结束 */
+        /* 前后箭头开始 */
+        #banner-prev,#banner-next{
+            position: absolute;
+            width: 27px;
+            height: 44px;
+            top: 50%;
+            margin-top: -22px;
+        }
+        #banner-prev{
+            left: 10px;
+        }
+        #banner-next{    
+            right: 10px;    
+        }
+        #banner-prev span,#banner-next span{
+            font-size: 40px;
+            color: #007AFF;
+            position: absolute;
+            width: 27px;
+            height: 44px;
+            left: -8px;
+            /* 绘制鼠标放上去的样式 */
+            cursor: pointer;
+        }
+        /* 前后箭头结束 */
+        /* 下方小点点开始 */
+        #banner #bottom{
+            height: 8px;
+            width: 64px;
+            position:absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -32px;
+        }
+        #banner #bottom li{
+            float: left;
+            width: 8px;
+            height: 8px;
+            margin:0 4px;
+            /* 绘制小圆圈 */
+            border-radius: 50%;
+            -moz-border-radius:50%;
+            -webkit-border-radius:50%;
+            background-color:#000;
+            opacity: .2;
+        }
+        #banner #bottom li:first-child{
+            background-color: #007aff;
+            opacity:1;
+        }
+        /* 小点点结束 */
+     
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <ul id="banner-img">
+            <li>
+                <a href="#" target="_self">
+                    <img src="./banner3.jpg" alt="轮播图1">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_self">
+                    <img src="./banner2.jpg" alt="轮播图2">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_self">
+                    <img src="./banner1.jpg" alt="轮播图3">
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_self">
+                    <img src="./banner4.jpg" alt="轮播图4">
+                </a>
+            </li>
+        </ul>
+        <div id="banner-prev"><span class="iconfont icon-zuojiantou"></span></div>
+        <div id="banner-next"><span class="iconfont icon-youjiantou"></span></div>
+        <ul id="bottom">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

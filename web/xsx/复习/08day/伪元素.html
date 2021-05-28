@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素的使用方法</title>
+    <!-- 
+        after和before伪类
+            1.默认是行内元素
+            2.伪元素必须的有content属性，要不然不会生效
+            3.after在内容元素最后插入
+            4.before在内容元素的最前面插入
+            5.虽然在前后插入额外元素，但并不会在文档中生成
+     -->
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            position: relative;
+        }
+        div::before{
+            content: "没有我你是不行的";
+            /* display: block; */
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        div::after{
+            content: "没有我你是不行的";
+            /* 使用 */
+            position: relative;
+            top: 100px;
+            left: 100px;
+            /* display: block; */
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>123123123</div>123
+</body>
+</html>

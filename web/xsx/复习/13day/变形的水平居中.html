@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform居中使用</title>
+    <!-- 
+        transform
+            none
+            translate
+        格式transform:translatex() translateY();
+            transform:translate(x,y)只写一个值的话默认y为0
+     -->
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            position: relative;
+            height: 100%;
+        }
+        body>div{
+            position: absolute;
+            top: 50%;
+            left: 50%;     
+            width: 50%;
+            height: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+
+        </div>
+    </div>
+</body>
+</html>

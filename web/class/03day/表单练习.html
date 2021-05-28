@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>表单练习</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="../01day/hehe.txt" method="GET">
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td><label for="emailaddr">邮箱地址</label></td>
+                        <td><input type="text" name="emailaddr" id="emailaddr"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="passwd">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label></td>
+                        <td><input type="password" name="passwd" id="passwd"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="epasswd">确定密码</label></td>
+                        <td><input type="password" name="epasswd" id="epasswd"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="file">上传头像</label></td>
+                        <td><input type="file" name="file" id="file"></td>
+                    </tr>
+                    <tr>
+                        <td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</td>
+                        <td><label for="female">女</label><input type="radio" name="sex" id="female" value="femal">
+                            <label for="male">男</label><input type="radio" name="sex" id="male" value="male">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>兴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;趣</td>
+                        <td>
+                            <label for="dengshan">登山</label><input type="checkbox" name="hobby[]" id="dengshan" value="dengshan">
+                            <label for="jiaoyou">郊游</label><input type="checkbox" name="hobby[]" id="jiaoyou" value="jiaoyou">
+                            <label for="diaoyu">钓鱼</label><input type="checkbox" name="hobby[]" id="diaoyu" value="diaoyu">
+                            <label for="yangyu">养鱼</label><input type="checkbox" name="hobby[]" id="yangyu" value="yangyu">
+                            <label for="siyang">饲养宠物</label><input type="checkbox" name="hobby[]" id="siyang" value="siyang">
+                            <label for="youxi">网络游戏</abel><input type="checkbox" name="hobby[]" id="youxi" value="youxi">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>国　　家</td>
+                        <td><select name="country">
+                            <option value="z">中国</option>
+                            <option value="k">韩国</option>
+                            <option value="j">日本</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="submit" value="登录" >
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </form>
+    </body>
+</html>

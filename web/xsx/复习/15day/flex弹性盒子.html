@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex弹性盒子布局</title>
+    <!-- 
+        弹性盒子:flex
+            属性: justify-content（元素在主轴上面的对齐方式）
+                    flex-start(左对齐)（默认值）
+                    flex-end（右对齐）
+                    center（中间对齐）
+                    space-between（两端对齐，弹性项目中间间隔相同）
+                    space-around（两端间隔相同，同时弹性项目中间间隔是两端间隔的两倍）
+
+            属性：flex-wrap（元素在主轴上面是否换行）
+                    nowrap(不换行)（默认值）(弹性盒子宽度不够的时候弹性项目自动收缩)
+                    wrap（换行）（第一行在上面）
+                    wrap-reverse（反向换行）（第一行在下面）
+
+            属性：align-items（元素在侧轴上的对齐方式）
+                    flex-start(交叉轴起点)（默认值）
+                    flex-end（交叉轴终点）
+                    center（交叉轴中间）
+                    space-between(交叉轴两端对齐)
+                    space-around（交叉轴两端间隔相同）
+                    baseline(第一行文字基线对齐)
+                    stretch（弹性项目未设置高度或者高度为auto的时候自动撑满弹性盒子）
+
+            属性：flex-direction(主轴的方向)
+                    row(水平向右)（默认值）
+                    row-reverse（水平向左）
+                    column(竖直向下)
+                    column-reverse（竖直向上）
+
+            属性：flex-flow(flex-direction和flex-wrap简写)
+
+            属性：align-content
+                    把子项作为一个整体，在多行的时候实现对齐方式变化
+                    flex-start
+                    flex-end
+                    center
+                    space-between
+                    space-around
+        弹性内容
+            属性：flex-grow
+                把剩余空间按照多少份分给弹性内容
+            属性：flex-shrink
+                按比例缩小弹性内容的宽度
+
+     -->
+    <style>
+        #div0{
+            /* 定义弹性盒子 */
+            display: flex;
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            /* 弹性盒子中弹性项目是否换行*/
+            /* flex-wrap: nowrap; */
+            /* 弹性盒子中弹性项目在主轴位置 */
+            /* justify-content: center; */
+            /* 弹性盒子中弹性项目在交叉轴位置 */
+            /* align-items: center; */
+            /* 弹性盒子中主轴的方向 */
+            /* flex-direction: column-reverse; */
+            /* flex-flow */
+            flex-flow: row nowrap;
+
+            align-content: center;
+        }
+        #div0 div{
+            /* 定义弹性项目 */
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div style="flex-shrink: 10;">1</div>
+        <div style="flex-shrink: 1;">2</div>
+        <div style="flex-shrink: 1;">3</div>
+        <div style="flex-shrink: 1;">4</div>
+        <div style="flex-shrink: 1;">5</div>
+        <!-- <div>6</div>
+        <div>7</div> -->
+    </div>
+</body>
+</html>

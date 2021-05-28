@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid red;
+        }
+        
+        #div2{
+            /* 
+                右边元素左移，视觉上元素大小不发生变化
+                但是元素实际所占用的空间变小了
+                实际宽度=width - margin-right
+             */
+            margin-right: -20px;
+        }   
+        
+    </style>
+</head>
+<body>
+
+    <div id="div1">x</div>
+    <div id="div2">x</div>
+    <div id="div3">x</div>
+</body>
+</html>

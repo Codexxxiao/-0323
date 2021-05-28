@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clear样式的shiyong</title>
+    <style>
+        #outer{
+            width: 300px;
+            border: 1px solid red;
+        }
+
+        /* 
+            去掉 #outer,
+            #last的样式会被#outer div的样式覆盖
+            原因是因为#ouer div的权重比#last高
+         */
+        #outer #last{
+            width: 300px;
+            height: 10px;
+            border: 2px solid yellow;
+            float: none;
+            clear: both;
+            }
+        #outer div{
+            float: left;
+            margin: 10px;
+            width: 120px;
+            height: 120px;
+            border: 1px solid green;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="last"></div>
+    </div>
+</body>
+</html>

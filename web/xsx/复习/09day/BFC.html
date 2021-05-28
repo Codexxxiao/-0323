@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <!-- 
+        1.html开启一个BFC
+            1.BFC用来决定块级盒的布局和浮动相互影响的一个区域
+            2.一个元素不能同事存在两个BFC里面
+            3.BFC包含创建了它的元素的所有子元素，但不创建了新的BFC
+                的子元素的内部元素
+     -->
+<head>
+    <meta charset="UTF-8">
+    <title>BFC的开启</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            background-color: red;
+        }
+        #div2{
+            /* 
+                float不为none的时候创建一个BFC
+                    里面的内容属于一个新的BFC
+             */
+           /*  float: left; */
+            /* 
+                overflow:元素不为visible的时候创建一个BFC
+                    里面的元素属于一个新的BFC
+             */
+            overflow: hidden;
+
+            /*
+                positon的元素为绝对定位元素absolute和fixed的时候
+                会创建一个新的BFC 
+             */
+            /* position:absolute; */
+           /*  position:fixed; */
+
+            /* 
+             display的元素为inline-blocak，等数值的时候会创建新的
+              BFC。还可以为table-caption,table-cell,table,inline-table
+             */
+           /* display: inline-block; */
+           /* display: table-caption; */
+           /* display: table-cell; */
+        }
+        #div3{
+            width: 80px;
+            height: 80px;
+            margin: 50px auto;
+            background-color: green;
+        }
+        #div4{
+            width: 20px;
+            height: 20px;
+            margin: 50px auto 0;
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2">
+        <div id="div3"></div>
+            <div id="div3">
+                <div id="div4"></div>
+            </div>
+    </div>
+</body>
+</html>

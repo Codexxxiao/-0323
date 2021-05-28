@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>width宽度设置实用</title>
+    <!-- 
+        width取值：
+            块状元素
+            auto：自动填满父级块状元素的宽度 
+            px：像素指定大小
+            em：按照当前字体大小计算
+            百分比：相对于包含的块状元素或行内块状元素的宽度计算
+
+            行内元素和行内块状元素
+            auto：宽度为内容的宽度
+            px：为行内元素的时候为内容大小，为行内块状元素的时候为像素指定大小
+            em：行内元素为内容大小，行内块状元素按照当前字体大小计算
+            百分比：行内元素为内容大小，行内块状元素相对于包含的块状元素或行内块状元素计算
+
+            总结：宽度只对块状元素和行内块状元素有意义，对行内元素没有实际意义
+     -->
+    <style>
+        #outer{
+            /* display: inline-block; */
+            width: 600px;
+            height: 600px;
+            border:1px solid red;
+        }
+        #div1{      
+            width:50%;
+            height: 100px;
+            border: 1px solid green;
+        }   
+        span{
+            /* display: inline-block; */
+            width: 2em;
+            border: 1px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="div1"></div>
+        <span>今天星期三</span>
+    </div>
+</body>
+</html>

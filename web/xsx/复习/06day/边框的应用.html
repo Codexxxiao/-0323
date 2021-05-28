@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框的应用</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .head_out{
+            width: 100%;
+            border-bottom: 4px solid #55a5ff;
+        }
+        .head_out .head{
+            width: 1000px;
+            height: 100px;
+            background-color: orangered;
+            margin: 0 auto;
+        }
+        .head a{
+            text-decoration: none;
+            color: #3c3c3c;
+            font-size: 12px;
+        }
+        .head .head_login{
+            border-right: 3px solid #3c3c3c;
+            border-left:3px solid #3c3c3c;
+            padding: 10px 20px;
+            margin-left: 20px;
+        }
+        .head .head_regist{
+            border-right: 3px solid #3c3c3c;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="head_out">
+            <header class="head">
+                <div class="head_top">
+                    <a href="###" class="head_login">登录</a>
+                    <a href="###" class="head_regist">注册</a>
+                </div>
+            </header>
+        </div>
+    </div>
+</body>
+</html>

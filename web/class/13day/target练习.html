@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>target练习</title>
+    <style>
+        a{
+            display: block;
+        }
+        #div0{
+            width: 500px;
+            height: 600px;
+            margin: 50px auto;
+           /*  border: 1px solid red; */
+        }
+        #div1{
+            position: relative;
+            width: 500px;
+            height: 400px;
+            /* border: 1px solid green; */
+        }
+        #div1 img{
+            position: absolute;
+            width: 500px;
+            height: 400px;
+        }
+        #div0 #div1 a:first-child img{
+            z-index: 1;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+           /*  border: 1px solid blue; */
+        }
+        ul::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ul li{
+            float: left;
+        }
+        ul li img{
+            margin: 10px;
+            width: 50px;
+        }
+        #div0 #div1>a:target img{
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div id="div1">
+            <a name='p1'><img src="./56af0da3ae601.jpg" alt=""></a>
+            <a name='p2'><img src="./5710984334b7e.jpg" alt=""></a>
+            <a name='p3'><img src="./5ba44d4304441.jpg" alt=""></a>
+            <a name='p4'><img src="./5cb450ae20929.jpg" alt=""></a>
+            <a name='p5'><img src="./F8F2-fxipenp2527999.jpg" alt=""></a>
+        </div>
+        <ul>
+            <li><a href="#p1"><img src="./56af0da3ae601.jpg" alt=""></a></li>
+            <li><a href="#p2"><img src="./5710984334b7e.jpg" alt=""></a></li>
+            <li><a href="#p3"><img src="./5ba44d4304441.jpg" alt=""></a></li>
+            <li><a href="#p4"><img src="./5cb450ae20929.jpg" alt=""></a></li>
+            <li><a href="#p5"><img src="./F8F2-fxipenp2527999.jpg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+</html>

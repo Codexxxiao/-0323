@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>id选择器</title>
+        <meta charset="utf-8">
+        <!-- id选择器：
+            我们可以给元素设置id属性，然后通过#+id属性值的方式来选择这个元素    
+        -->
+        <!-- 
+            以前思路反了，一直以为先设置#id值然后在元素通过id值设置样式
+            其实是先给元素id值，然后在通过#id值设置这个元素的属性。
+         -->
+        <style type="text/css">
+            #country{
+                background-color: white;
+                color: yellow;
+            }
+            #star{
+                background-color: white;
+                color:blue;
+            }
+        </style>
+    </head>
+    <body>
+        <p>我喜欢的城市</p>
+        <ol id="country">
+            <li>深圳</li>
+            <li>成都</li>
+            <li>杭州</li>
+        </ol>
+        <p>我喜欢的女明星</p>
+        <ul id="star">
+            <li>赵丽颖</li>
+            <li>杨幂</li>
+            <li>迪丽热巴</li>
+        </ul>
+    </body>
+</html>

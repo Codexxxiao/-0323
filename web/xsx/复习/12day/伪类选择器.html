@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器的使用|复选框改变样式</title>
+    <style>
+        ul{
+            margin: 50px auto 0;
+            padding: 0;
+            width:300px;
+            /* font-size: 0; */
+            list-style-type: none;
+        }
+        ul li{
+            position: relative;
+            height: 50px;
+            line-height: 50px;
+            padding: 10px;
+        }
+        ul li input[type='checkbox']{
+            display: none;
+        }
+        ul li label{
+            position: absolute;
+            background-color: burlywood;
+            width: 200px;
+            
+        }
+        ul li label::before{
+            display:inline-block;
+            content: '×';
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-right: 15px;
+            line-height: 30px;
+            text-align: center;
+        }
+        ul li input[type='checkbox']:checked+label::before{
+            content: '√';
+        }
+        ul li input[type='checkbox']:checked+label{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+    <ul>
+        <li>
+            <input type="checkbox" name="girl[]" value="z" id="z"><label for="z">赵丽颖</label>
+        </li>
+        <li>
+            <input type="checkbox" name="girl[]" value="d" id="d"><label for="d">迪丽热巴</label>
+        </li>
+        <li>
+            <input type="checkbox" name="girl[]" value="l" id="l"><label for="l">刘亦菲</label>
+        </li>
+        <li>
+            <input type="checkbox" name="girl[]" value="y" id="y"><label for="y">杨幂</label>
+        </li>
+    </ul>
+</form>
+</body>
+</html>

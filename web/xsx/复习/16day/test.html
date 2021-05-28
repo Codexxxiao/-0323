@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        #div0{
+            width: 200px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        #div0>div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+
+            /* padding和margin使用百分比的时候，如果只有一个值默认是父级宽度的百分比，
+                有两个值的话，第一个值为上下，第二个值为左右
+             */
+            padding: 10% 20%;
+            margin: 10% 20%;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div></div>
+    </div>
+</body>
+</html>

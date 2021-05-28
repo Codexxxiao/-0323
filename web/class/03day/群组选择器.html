@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>群组选择器</title>
+    <style type="text/css">
+        .con{
+            width: 200px;
+            height: 200px;
+        }
+        /* 
+            群组选择器，将多个选择器使用，隔开 可以同时对多个选择器设置样式
+            如果多个元素有相同的样式，方法有两种
+                使用一个共同的类名
+                使用群组选择器
+         */
+        .con1,.con2,.con3,.con4{
+            width: 100px;
+            height: 100px;
+        }
+        .con1{
+            background-color: red;
+        }
+        .con2{
+            background-color: yellow;
+        }
+        .con3{
+            background-color: green;
+        }
+        .con4{
+            background-color: violet;
+        }
+    </style>
+</head>
+<!-- 继承两个类，同样都有width和height属性，以哪个属性为主？ -->
+<body>
+    <li class="con con1 "></li>
+    <li class="con2 con"></li>
+    <li class="con3 con"></li>
+    <li class="con4 con"></li>
+</body>
+</html>

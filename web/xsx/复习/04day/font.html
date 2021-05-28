@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font属性的各种用法</title>
+    <style>
+        .p1{
+            font-family: SimSun;
+        }
+        .p2{
+            /* 字体英文单词之间有空格的话，需要用单引号 */
+            font-family: 'Microsoft YaHei';
+        }
+        .p3{
+            /* 
+                font-style:设置字体的风格
+                    nomal为正常
+                    italic为斜体
+                    oblique为倾斜角度（谷歌只支持0deg，火狐支持90deg~-90deg）
+             */
+            font-style: oblique 60deg;
+        }
+        .p4{
+            /* 
+                font-weight：设置字体的粗细情况
+                    bolder：比父元素字体大点
+                    lighter：比父元素字体小点
+                    bold：设置为粗体
+                    100~900：可以设置值为100~900九个等级，可能100、200、300是一个粗细，400、500、600是相同粗细
+             */
+            font-weight:bolder;
+        }
+        .p5{
+            /* 
+                一般不采用font方式设置字体格式
+                其中font-style和font-weight可以改变顺序,但是font-size和font-family顺序不可变且必须有这两个属性
+                这个font定义才能生效，否则不能生效
+             */
+            font: bold italic 30px SimSun;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">font-family：使用衬线字体</p>
+    <p class="p2">font-family：使用非衬线字体</p>
+    <p class="p3">font-style：设置字体的风格</p>
+    <p class="p4">font-weight：设置字体的粗细</p>
+    <p class="p5">font：设置字体的全部格式</p>
+</body>
+</html>

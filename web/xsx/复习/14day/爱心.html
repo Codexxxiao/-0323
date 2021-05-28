@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱心练习</title>
+     <style>
+         div{
+             position: relative;
+             width: 200px;
+             height: 200px;
+             margin: 50px auto;
+             border: 1px solid red;
+         }
+       /*   div:hover{
+             transform: scale(1.2);
+         } */
+         div::before{
+             position: absolute;
+             content: '';
+             left: 0;
+             top: 0;
+             width: 100px;
+             height: 200px;
+             background-color: hotpink;
+
+            transform-origin: 100px 100px;
+             transform: rotate(-45deg);
+             border-top-left-radius: 100% 50%;
+            border-top-right-radius: 100% 50%;
+         }
+         div::after{
+             position: absolute;
+             content: '';
+             right: 0;
+             top: 0;
+             width: 100px;
+             height: 200px;
+             background-color: hotpink;
+
+            
+            border-radius: 100% 100% 0px 0px;
+            transform-origin: 0 100px;
+            transform: rotate(45deg);
+         }
+     </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

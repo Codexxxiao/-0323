@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <!-- css三种引用方法优先度比较：内联式，行内引入>嵌入式，头部引入>外部引入 -->
+    <head>
+        <title>css的引入方法-css-xsx</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="css的引入方法">
+        <!-- 3.css外部式引入，优先度最低 -->
+        <link rel="stylesheet" type="text/css" href="1css.css">
+        <!-- 
+            2.嵌入式引入， 头部引入
+         -->
+         <!--  
+             告诉浏览器标签内的内容是css文本，
+             未写的话有些手机浏览器无法识别.
+             
+         -->
+         <style type="text/css"></style>{
+                 background-color: red;
+                 width: 50;
+                 height: 50;
+             }
+         </style>
+    </head>
+    <body>
+      /*   <!-- 1.内联式，行内引入(优先级高于嵌入式引入) 
+            特点：冗余代码多，代码量大。
+                不利于维护和修改。
+                个别效果可以考虑使用，不能滥用。
+        --> */
+        <ul>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+            <li style="background-color: green;width: 100;height: 100;"></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </body>
+</html>

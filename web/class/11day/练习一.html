@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习一</title>
+    <!-- 表单需要用form包起来 -->
+    <style>
+        input[type='radio']{
+            display: none;
+        }
+        label{
+            display: block;
+            color: white;
+            background-color: black;
+            width: 180px;
+            white-space: nowrap;
+        }
+        label::before{
+            display: inline-block;
+            content: "×";
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin-right: 10px;
+            text-align: center;
+        }
+        input:checked+label::before{
+            content: '√';
+        }
+        input:checked+label{
+            background-color: chocolate;
+        }
+        input:last-of-type:checked+label::after{
+            content: '小伙子思想很危险！';
+            color: black;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="jg" id="jg1"><label for="jg1">静哥真帅！</label><br>
+    <input type="radio" name="jg" id="jg2"><label for="jg2">静哥真英俊！</label><br>
+    <input type="radio" name="jg" id="jg3"><label for="jg3">静哥又帅又英俊！</label><br>
+    <input type="radio" name="jg" id="jg4"><label for="jg4">闫海静真丑！</label><br>
+</body>
+</html>

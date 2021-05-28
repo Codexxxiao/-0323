@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>height样式实例</title>
+    <!-- 
+        height:
+            auto:计算机会计算根据内容和样式计算高度
+            em：根据当前字体大小计算高度
+            百分比：相对于包含的块级元素的高度计算
+            px：像素值
+     -->
+     <!-- 
+         min-width min-height
+         max-width max-height
+      -->
+    <style>
+        #outer{
+            width: 600px;
+            height: 700px;
+            border: 1px solid red;
+            /* line-height:300px; */
+        }
+        #div1{
+            width: 300px;
+            height: 50%;
+            border: 1px solid green;
+            /* line-height:300px; */
+        }
+        span{
+            height: 20em;
+            border: 1px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="div1"></div>
+        <span>今天星期三</span>
+    </div>
+</body>
+</html>

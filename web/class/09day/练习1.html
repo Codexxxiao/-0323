@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新浪邮箱的练习</title>
+     <style>
+         /* 解决子元素浮动，父元素塌陷的问题 */
+         .clearFire::after{
+             content: "";
+             height: 0px;
+             display: block;
+             clear: both;
+         }
+
+         #outer{
+             width: 300px;
+             /* border: 1px solid red; */
+             margin-top: 300px;
+         }
+
+         #outer>div{
+             /* float可以和position:relative一起用 */
+             float: left;
+             width: 150px;
+             height: 28px;
+             position: relative;
+             line-height: 28px;
+             font-size: 16px;
+             font-weight: bold;
+             text-align: center;
+             /* border: 1px solid black; */
+             box-sizing: border-box;
+         }
+
+         #outer #outer-sina{
+             background-color: #0479D6;
+             color: #FFF;
+         }
+         #outer #outer-sina span{
+             position: absolute;
+             width: 0;
+             height: 0;
+             border: 5px solid transparent;
+             border-top-color: #0479D6;
+             bottom: -10px;
+             left: 50%;
+             margin-left: -5px;
+         }
+
+         #outer #outer-phone{
+             background-color: #ECECEC;
+             color: #656570;
+         }
+         #outer #outer-phone img{
+             /* 使用absolute，页面位置不保留，文字居中 */
+             position: absolute;
+             top: -15px;
+         }
+     </style>
+</head>
+<body>
+    <div id="outer" class="clearFire">
+        <div id="outer-sina">注册新浪邮箱
+            <span></span>
+        </div>
+        <div id="outer-phone">注册手机邮箱
+            <img src="./registerNew.gif" alt="动态图">
+        </div>
+    </div>
+</body>
+</html>

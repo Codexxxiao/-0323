@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子元素撑开父元素高度的方法</title>
+    <style>
+        #div1{
+            /* 方法一：父元素浮动 */
+            /* float: left; */
+            width: 100%;
+            /* 方法二：直接设置父元素高度 */
+            /* height: 500px; */
+            /* 方法三：给父元素添加overflow:hidden;创建新的BFC */
+            /* overflow: hidden; */
+            border: 5px solid red;
+            /* 方法六：使用display创建新的BFC */
+            display: inline-block;
+        }
+        /* 方法五：使用after */
+        /* #div1::after{
+            content: " ";
+            display: block;
+            clear: both;
+        } */
+        #div2{
+            float: left;
+            height: 500px;
+            width: 100%;
+            border: 1px solid green;
+        }
+        /* 方法四：添加一个新的标签，使用clear:both; */
+        /* #div3{
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类target的使用</title>
+    <style>
+        /* 伪类target的使用
+            并非a获得锚点，是被a指向的片段获得锚点
+            因此target前面的元素应该是被指向的片段元素    
+         */
+        /* li:target{
+            color:red;
+            list-style-type: none;
+        } */
+
+        /* 
+            伪类focus的使用
+            输入框获得焦点之后的样式变化
+            输入框边框未设置颜色的时候颜色跟字体颜色一样
+         */
+        input{
+            /* 去掉输入框边框 */
+            outline: none;
+            
+        }
+        input:focus{
+            /* 输入框边框的颜色如果未设置的话会和字体的颜色一样 */
+            outline-style: dotted;
+            outline-color: black;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <a href="#li1">1</a>
+    <a href="#li2">2</a>
+    <a href="#li3">3</a>
+    <a href="#li4">4</a>
+    <a href="#li5">5</a>
+    <a href="#li6">6</a>
+    <ul>
+        <li id="li1">1</li>
+        <li id="li2">2</li>
+        <li id="li3">3</li>
+        <li id="li4">4</li>
+        <li id="li5">5</li>
+        <li id="li6">6</li>
+    </ul> -->
+
+    <form action="#" method="GET">
+        <input type="text" name="userName" autocomplete="off" autofocus placeholder="请输入用户名"><br>
+        <input type="password" name="passwd" autocomplete="off" placeholder="请输入密码" autofocus><br>
+        <button type="submit">登录</button>
+    </form>
+</body>
+</html>

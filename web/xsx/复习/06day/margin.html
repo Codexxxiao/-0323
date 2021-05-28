@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin样式使用</title>
+    <!-- margin可以设置为为负数，注意margin设置为负数的时候的各种使用 -->
+    <!-- 
+        margin对行内元素的影响
+            在垂直方向不生效
+     -->
+    <style>
+        /* body{
+            font-size: 0px;
+        } */
+        #div1{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid green;
+            /* 
+            设置外边距整体移动10px
+             */
+            margin: 10px;
+        }
+        #div2{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            /* 
+                设置div向右 20px
+                设置div向下 20px   
+             */
+             margin-top: 20px;
+             margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

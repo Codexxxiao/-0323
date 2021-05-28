@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习四太极图</title>
+    <style>
+        #outer{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 1px solid black;
+        }
+        #zuo{
+            float: left;
+            position: relative;
+            width: 200px;
+            height: 400px;
+            background-color: black;
+            border-top-left-radius: 200px;
+            border-bottom-left-radius: 200px;
+        }
+        #zuo #bai{
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            bottom: 0;
+            right: 0;
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            background-color: white;
+        }
+        #zuo #bai1{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            right: 0;
+            top: 25%;
+            margin-top: -10px;
+            background-color: white;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        #zuo #bai #ban{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background-color: black;
+            right: 0;
+            top: 50%;
+            margin-top: -10px;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+
+
+        #you{
+            margin-left: -1px;
+            float: left;
+            position: relative;
+            width: 200px;
+            height: 400px;
+            background-color: white;
+            border-top-right-radius: 200px;
+            border-bottom-right-radius: 200px;
+            /* border-right: 1px solid black; */
+        }
+        #you #hei{
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            top: 0;
+            left: 0;
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            background-color: black;
+        }
+
+        #you #hei1{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            left: 0;
+            top: 75%;
+            margin-top: -10px;
+            background-color: black;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        #you #hei #ban1{
+            position: absolute;
+            width: 20px;
+            height: 40px;
+            background-color: white;
+            left: 0;
+            top: 50%;
+            margin-top: -10px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+    <div id="zuo">
+        <div id="bai">
+            <div id="ban"></div>
+        </div>
+        <div id="bai1"></div>
+    </div>
+    <div id="you">
+        <div id="hei">
+            <div id="ban1"></div>
+        </div>
+        <div id="hei1"></div>
+    </div>
+</div>
+</body>
+</html>

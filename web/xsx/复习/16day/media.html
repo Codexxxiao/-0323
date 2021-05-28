@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用flex制作media网页头部</title>
+    <link rel="stylesheet" href="./font/iconfont.css" type="text/css">
+    <style>
+        /* 清除基本样式 */
+        body{
+            margin: 0;
+        }
+        header{
+            background-color: #2D4373;
+            color: white;
+
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+            min-width: 400px;
+        }
+        header h2{
+            margin: 0;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background-color: #3B5998;
+        }
+        header ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            width: 100%;
+        }
+        header ul li{
+            height: 30px;
+            line-height: 30px;
+            margin: 6px 6px 0;
+            font-size: 12px;
+            background-color: #3B5998;
+
+            border-radius: 3px;
+        }
+        header form{
+            position: relative;
+            width: 100%;
+            height: 52px;
+            /* 内边距配合boder-box把内容区域缩小 */
+            padding: 6px;
+            box-sizing: border-box;
+
+            display: flex;
+        }
+        header form input{
+            width: 100%;
+            
+            outline: none;
+            border: 0;
+            border-radius: 3px;
+            background-color: #CBD9F5;
+        }
+        header form .iconfont{
+            position: absolute;
+            height: 40px;
+            right: 9px;
+            top: 6px;
+            width: 40px;
+            outline: none;
+            border: 0;
+            background-color: #CBD9F5;
+            color: #A1B3DA;
+            font-size: 20px;
+        }
+        @media (min-width:768px){
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>IBiji.Tech</h2>
+        <ul>
+            <li>系列教程</li>
+            <li>实例教程</li>
+            <li>工具推荐</li>
+        </ul>
+        <form action="#" method="GET">
+            <input type="text" >
+            <button class="iconfont">&#xe60d;</button>
+        </form>
+    </header>
+</body>
+</html>

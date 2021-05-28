@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动漫人物行走</title>
+    <style>
+        #div0{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+        }
+        #move{
+            position: absolute;
+            width: 45px;
+            height: 84px;
+            background-image: url('./f6d91f3fe2734b6f83a9afe8d7f102b9.gif');
+            background-repeat: no-repeat;
+
+            animation-name: right,bottom,left,top;
+            animation-duration: 5s,5s,5s,5s;
+            animation-timing-function: linear;
+            animation-delay: 0s,5s,10s,15s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes right{
+            from{
+                background-image: url('./430af3e02a4b4a9e8f8a660d28648666.gif');
+                left: 0;
+            }
+            to{
+                background-image: url('./430af3e02a4b4a9e8f8a660d28648666.gif');
+                left: 455px;
+            }
+        }
+
+        @keyframes bottom{
+            from{
+                background-image: url('./f8dc45503b6a4a799a5383aa83397152.gif');
+                left: 455px;
+                bottom: 416px;
+            }
+            to{
+                background-image: url('./f8dc45503b6a4a799a5383aa83397152.gif');
+                left: 455px;
+                bottom: 0px;
+            }
+        }
+
+        @keyframes left{
+            from{
+                background-image: url('./e50d17abedd44f8f8024a774d0376854.gif');
+                left: 455px;
+                bottom: 0px;
+            }
+            to{
+                background-image: url('./e50d17abedd44f8f8024a774d0376854.gif');
+                left: 0px;
+                bottom: 0px;
+            }
+        }
+
+        @keyframes top{
+            from{
+                background-image: url('./b18c7301f6bb44f196e16048955cc2fe.gif');
+                left: 0px;
+                bottom: 0px;
+            }
+            to{
+                background-image: url('./b18c7301f6bb44f196e16048955cc2fe.gif');
+                left: 0px;
+                bottom: 416px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div id="move"></div>
+    </div>
+</body>
+</html>

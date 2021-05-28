@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        绝对定位，元素可以放在页面的任意位置，top距离页面上部多是距离
+        left距离页面左部多少距离
+     -->
+    <title>absolute绝对定位</title>
+    <style>
+        div{
+            border: 2px solid black;
+        }
+        #pos_abs{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 200px;
+            top: 200px;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="pos_abs">这是一个绝对定位盒子</div>
+    <div>通过绝对定位,元素可以放置在页面上的任何位置,下面的黑色盒子距离页面左侧100px,距离页面顶部150px.</div>
+</body>
+</html>

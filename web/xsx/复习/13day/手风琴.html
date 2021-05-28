@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴的练习</title>
+    <style>
+        ul{
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+        }
+        ul li{
+            width: 300px;
+            margin-top: 5px;
+        }
+        ul li h3{
+            margin: 0;
+            padding: 0;
+            padding-left: 10px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+        ul li:nth-child(1) h3{
+            background-color: #DBE5F3;
+        }
+        ul li:nth-child(2) h3{
+            background-color: #F3E0E8;
+        }
+        ul li:nth-child(3) h3{
+            background-color: #CF93C1;
+        }
+        ul li:nth-child(4) h3{
+            background-color: #BECB86;
+        }
+        ul li:nth-child(5) h3{
+            background-color: #AD9BAD;
+        }
+        ul li div{
+            width: 300px;
+            height: 0px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 0px;
+            overflow: hidden;
+            transition-property: height;
+            transition-duration: 1s;
+        }
+        ul li div img{
+            height: 150px;
+            vertical-align: middle;
+            opacity: 0;
+        }
+
+        ul li:hover div{
+            height: 200px;
+        }
+        ul li:hover div img{
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 2s;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <h3>温柔贤惠</h3>
+            <div>
+                <img src="./56af0da3ae601.jpg" alt="">
+            </div>
+        </li>
+        <li>
+            <h3>甜美时尚</h3>
+            <div>
+                <img src="./5710984334b7e.jpg" alt="">
+            </div>
+        </li>
+        <li>
+            <h3>独立稳重</h3>
+            <div>
+                <img src="./5ba44d4304441.jpg" alt="">
+            </div>
+        </li>
+        <li>
+            <h3>妩媚性感</h3>
+            <div>
+                <img src="./5cb450ae20929.jpg" alt="">
+            </div>
+        </li>
+        <li>
+            <h3>女汉子</h3>
+            <div>
+                <img src="./F8F2-fxipenp2527999.jpg" alt="">
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

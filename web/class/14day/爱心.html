@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>爱心练习</title>
+     <style>
+         div{
+             position: relative;
+             width: 200px;
+             height: 200px;
+             margin: 50px auto;
+             /* border: 1px solid red; */
+            opacity: 1;
+             animation-name: test;
+             animation-duration: 300ms;
+             animation-iteration-count: infinite;
+             animation-direction: alternate;
+             animation-timing-function: ease-in;
+         }
+         
+         @keyframes test{
+             from{
+                 transform: scale(.8);
+             }
+             25%{
+                 transform: scale(1);
+                 opacity: .8;
+             }
+             50%{
+                 transform: scale(1.1);
+                 opacity: .7;
+             }
+             to{
+                 transform: scale(1.2);
+                 opacity: 1;
+             }
+         }
+
+         div::before{
+             position: absolute;
+             content: '';
+             left: 0;
+             top: 0;
+             width: 100px;
+             height: 150px;
+             background-color: red;
+
+            transform-origin: 75px 50px;
+             transform: rotate(-45deg);
+             border-radius: 50% 50% 30px 30px;
+
+         }
+         div::after{
+             position: absolute;
+             content: '';
+             right: 0;
+             top: 0;
+             width: 100px;
+             height: 150px;
+             background-color: red;
+
+            
+             border-radius: 50% 50% 0px 30px;
+             transform-origin: 18px 31px;
+            transform: rotate(45deg);
+         }
+     </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水滴练习</title>
+    <style>
+        div{
+                position:relative;
+                margin:100px auto 0;
+                width: 200px;
+                height: 200px;
+                border: 1px solid red;
+                /* 第二步提高两种颜色之间的对比度 */
+                filter: contrast(1000%);
+                /* 第三步：使背景变成白色 */
+                background-color: white;
+
+        }
+        div::before,div::after{
+            position: absolute;
+            content: '';
+            border-radius:50%;
+            /* 第一步，使得两个子元素模糊 */
+            filter: blur(10px);
+        }
+        div::before{ 
+            top:5px;
+            width: 100px;
+            height:100px;
+            background-color:blue;
+        }
+        div::after{
+            left: 50px;
+            width:50px;
+            height: 50px;
+            background-color:skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

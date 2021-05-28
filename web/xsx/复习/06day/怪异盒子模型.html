@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>怪异盒子模型的玩法</title>
+    <!-- 
+        使用box-sizing:border-box生成怪异盒子
+        使用box-sizing:context-box生成标准盒子
+        
+        标准盒子：width为context区域的宽度
+        怪异盒子：width为border+padding+context区域的宽度
+     -->
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            padding: 10px;
+            margin: 15px;
+            border: 2px solid #000;
+            box-sizing: content-box;/* 标准盒子模型 */
+            box-sizing: border-box;/* 怪异盒子模型 */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

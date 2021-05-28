@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style>
+        /* 
+            属性选择器1：选择含有attr属性的E元素
+                E[attr]{}
+         */
+        /* abbr[title]{
+            color: red;
+        } */
+        /* 
+            属性选择器2：选择含有多属性的E元素
+                E[attr1][attr2]{}
+         */
+        /* abbr[title][style]{
+            color: yellow;
+        } */
+        /* 
+            属性选择器3：选择属性值等于val的E元素
+            E[abbr='val']{}
+         */
+        /* abbr[title='Block']{
+            color: red;
+        } */
+        /* 
+            属性选择器4：选择属性值中含有val的E元素
+            E[attr*='val']{}
+         */
+        abbr[title*='Block']{
+            color: red;
+        }
+        /* 
+            E[attr^='val']{}：选择以val开始的E元素
+            E[attr$='val']{}：选择以val结束的E元素
+         */
+    </style>
+</head>
+<body>
+    <abbr title="Block ! Fomating Context" style="background-color: white;">BFC</abbr>
+    <abbr title="Blo!ck Fomating Context">BFC</abbr>
+    <abbr title="Block Fomating Context">BFC</abbr>
+    <abbr title="Block Fomating Context">BFC</abbr>
+    <abbr title="Block Foma!ting Context">BFC</abbr>
+    <abbr title="Block">BFC</abbr>
+</body>
+</html>

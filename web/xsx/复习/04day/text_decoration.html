@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text_decoration的样式</title>
+    <!-- 
+        text-decoration除了设置是否为上划线还是下划线，还能定义线的颜色，其中用空格分隔
+     -->
+    <style>
+        .p1{
+            /* 
+                text-decoration下划线：underline            
+             */
+            text-decoration: underline rgb(85, 85, 204);
+            font-size: 30px;
+        }
+      
+        .p2{
+            /* 
+            text-decoration的上划线：overline 
+             */
+            text-decoration: overline red;
+        }
+        .p3{
+            /* 
+                text-decoretion的贯穿线：line-through       
+             */
+            text-decoration: line-through white;
+        }
+        /* 
+            text-decoration可以定义多个值，可以同时存在上划线，下划线和贯穿线       
+         */
+        .p4{
+            text-decoration: underline overline line-through yellow;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">这是text-decoration的下划线</p>
+    <p class="p2">这是text-decoration的上划线</p>
+    <p class="p3">这是text-decoration的贯穿线</p>
+    <p class="p4">这是text-decoration的三线合一</p>
+</body>
+</html>

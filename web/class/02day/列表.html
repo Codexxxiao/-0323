@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>列表的html-列表制定-xsx</title>
+        <meta charset="utf-8">
+        <meta name="keywords" content="列表,html">
+        <meta name="description" content="无序列表、有序列表、自定义列表的使用">
+    </head>
+    <body>
+        <!-- 一般开发中只使用h1~h3，越往后搜索引擎权重越小，同时h1项目中一般只使用一次 -->
+        <h2>
+            喜欢的水果有哪些
+        </h2>
+        <!-- 注意ul标签和ol标签里面一定需要嵌套li标签，也可以嵌套其它标签 -->
+        <ul>
+            <li>苹果</li>
+            <li>西瓜</li>
+            <li>葡萄</li>
+            <ul>
+                <li>绿色葡萄</li>
+                <li>红色葡萄</li>
+                <li>紫色葡萄</li>
+            </ul>
+        </ul>
+        <h2>
+            喜欢的女明星排行?
+        </h2>
+        <ol>
+            <li>赵丽颖</li>
+            <li>刘亦菲</li>
+            <li>杨幂</li>
+            <li>迪丽热巴</li>
+            <li>
+                <span>234</span>
+                <dl>
+                    <span>123</span>
+                    <dt>名校</dt>
+                    <dd>清华大学</dd>
+                    <dd>北京大学</dd>
+                    <dd>复旦大学</dd>
+                </dl>
+            </li>
+        </ol>
+        <dl>
+            <!-- dd标签会自动缩进格式,dd标签里面不能嵌套dt标签了，但是可以嵌套ol，ul，a,img等标签
+                着重点就是：dd标签里面不能在嵌套dt标签，可能原因浏览器默认dt标签为dd标签的父标签
+            -->
+            
+            <dt>名校</dt>
+            <dd>清华大学</dd>
+            <dd>北京大学</dd>
+            <dd>复旦大学</dd>
+            <dd><a href="http://www.baidu.com">百度</a></dd>
+            <dd><img src="../../1.png" alt=""></dd>
+            <dd>
+            <ol>
+                <li>野鸡大学</li>
+                <li>11大学</li>
+                <li>22大学</li>
+                <li>33大学</li>
+            </ol></dd>
+        </dl>
+        
+    </body>
+</html>

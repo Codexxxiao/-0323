@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display属性</title>
+    <!-- 
+        block:让元素以块标签显示
+        inline：让元素以行元素显示(无法设置宽度和高度)
+        inline-block：让元素以行内块显示
+        none：让元素隐藏，包含子孙元素全部隐藏，并且不会占用任何位置
+     -->
+    <style>
+        .con1{
+            display: block;
+            width: 400px;
+            height: 100px;
+            background-color: pink;
+        }
+        .con3{
+            display: inline;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            font-size: 30px;
+
+        }
+        .con4{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #5df2ff;
+        }
+        .con5{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <span class="con1">hello</span>
+    <em class="con2">world</em>
+    <div class="con3">那哈哈哈</div>
+    <div class="con4">con44</div>
+    <div class="con5">
+        222
+        <span>333</span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>圣杯布局</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        #outer{
+            height: 100%;
+            background-color: aquamarine;
+
+            /* 核心代码三：使用内边距把内容拉出来，设置最小宽度防止页面过小 */
+            padding: 0 200px;
+            min-width:300px
+        }
+        #middle{
+            height: 100%;
+            background-color: bisque ;
+
+            float: left;
+        }
+        #left{
+            width: 200px;
+            height: 100%;
+            background-color: brown;
+
+            /* 核心代码一：设置左浮动，和相对定位 */
+            float: left;
+            position: relative;
+            margin-left: -100%;
+            left: -200px;
+        }
+        #right{
+            width: 200px;
+            height: 100%;
+            background-color: coral;
+
+            /* 核心代码二：设置左浮动，和相对定位 */
+            float: left;
+            position: relative;
+            margin-left: -200px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="middle">Alias qui dolorum ut ut esse atque voluptatum molestias. Ex fuga voluptatem eveniet consequatur. Eius soluta odio occaecati omnis id. Consequatur neque soluta dolorem excepturi aspernatur.
+ 
+Nemo voluptas nostrum consectetur quia mollitia suscipit aut minima. Sit repellat quia sequi sint minus eaque ea dolor. Tempora sit optio. Corrupti porro qui soluta. Expedita debitis dicta saepe sed ut. Alias dolores earum debitis est omnis ut sed quasi.
+ 
+Esse quisquam beatae earum sequi repudiandae. Et est saepe. Mollitia in quibusdam fuga. Doloremque distinctio et et corporis. Animi ab reiciendis et ipsam animi harum id eveniet. Omnis sed ipsum possimus dolorem esse possimus earum eum.</div>
+<!-- 
+    注意在使用float布局的时候，left和right要在middle的后面，因为层级相同的情况下
+        在后面的元素会覆盖前面的元素。
+        
+        在使用background-image引入多张图片的时候，第一张在最上面，后面的依次放在下面，这点
+            与平常的先后层级有区别。
+ -->
+        <div id="left"> </div>
+        <div id="right"></div>
+    </div>
+</body>
+</html>

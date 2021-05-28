@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类复习</title>
+    <style>
+        table{
+            width: 800px;
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid red;
+        }
+
+        /* 
+            使用E:nth-of-type(odd)
+            使用E:nth-of-type(even)
+            使表格奇数行变红色，偶数变绿色
+         */
+        tr:nth-of-type(odd){
+            background-color: red;
+        }
+        tr:nth-of-type(even){
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table>
+</body>
+</html>

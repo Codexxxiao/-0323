@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器优先级权重计算</title>
+    <style type="text/css">
+        #box p{
+            background-color: red;
+        }
+        #box .con p{
+            background-color: pink;
+        }
+        .box #con p{
+            background-color: green;
+        }
+        .box .show p{
+            background-color: yellow;
+        }
+        .box .con .show p{
+            background-color: grey;
+        }
+        #box .show p{
+            background-color: purple;
+        }
+        #box #con .show p{
+            background-color: violet;
+        }
+        #box #con #show p{
+            background-color: wheat;
+        }
+        #box #con #show p{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="box">
+        <div id="con" class="con">
+            <div class="show " id="show">
+                <p>我是div</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

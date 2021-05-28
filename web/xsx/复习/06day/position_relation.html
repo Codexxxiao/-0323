@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>relative相对位置定位</title>
+	</head>
+	<!-- 
+		position:fixed相对整个浏览器进行绝对定位
+	 -->
+	<style>
+	div.pos_rel{
+        /*下面是一个基于static的绝对定位*/
+		/*position:absolute;*/
+ 
+		/*下面是一个基于浏览器窗口的绝对定位*/
+		/*position:fixed;
+		left:100px;
+		top:150px;*/
+ 
+		/*下面是一个相对定位*/
+		position:relative;
+		left:-20px;
+		top:-10px;
+		width:200px;
+		height:200px;
+		background-color:black;
+		color:white;
+		text-align:center;
+	}
+	div{
+		border:2px solid black;
+		width:500px;
+		height:500px;
+	}
+	</style>
+	<body>
+		<div class="pos_rel">
+			这是一个rlative定位的盒子
+		</div>
+		<div>
+			通过fixed固定定位,元素可以放置在页面上的任何位置,下面的黑色盒子距离浏览器窗口左侧100px,距离浏览器窗口顶部150px.当我们滚动页面时,黑盒子和浏览器窗口的相对位置不会发生任何变化.
+		</div>
+		<div>此盒子用来撑开页面高度</div>
+		<div>此盒子用来撑开页面高度</div>
+	</body>
+</html>

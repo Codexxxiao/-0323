@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <style type="text/css"></style>
+    <!-- base标签使用失败 -->
+  <!--   <base href="D:\Program Files\feiq\Recv Files\0323\temp\_v_images"> -->
+     <base target="_blank">
+ 
+    <meta charset="UTF-8">
+     <!-- title标签是head标签内唯一必须的元素 -->
+    <title>第一天测试学习</title>
+</head>
+<body>
+        <!--target="_blank"属性在新窗口打开，未标志则默认在本窗口打开-->
+    <a href="http://www.baidu.com" >百度</a><br>
+    <!-- abbr标签指示简称或缩写，当鼠标移动到元素内容时显示全称 -->
+    <abbr title="Hyper Text Makeup Language" >HTML</abbr><br>
+    <!-- article标签规定独立的自包含部分 -->
+    <article>
+        <h1>这是article的第一个标题</h1>
+        <p>这是article的第一个段落</p>
+    </article>
+    <!-- audio标签是音频标签，属性可选择音频播放的方式 -->
+    <audio src="1.ogg"  controls="controls">一段录音</audio><br>
+    <!-- b标签用来加粗文字内容 -->
+    <b>这是一段标粗的文字</b><br>
+    <!-- a标签属性附带一个url，a标签元素内容为一张图片，创建一个图片链接 -->
+    <a href="http://www.baidu.com" >   
+        <!-- img目前只能正确访问本目录下的图片，未解决访问其它图片路径的方法 -->
+         <img src="/1.png" alt="picture" height="148" width="132">
+    </a><br>
+    <!-- blockquote标签定义块引用，前后通常跟其它文本区分出来，增加前后缩进 -->
+   我的<blockquote cite="http://www.baidu.com">这是一段长的引用</blockquote>引用来在我自己<br><hr>
+   <button name="button" type="submit">submit</button><br>
+    <!-- table标签，用来标识一个表格 -->
+   <table border="3" width="50%">
+       <!-- caption只能跟在table标签之后，为表格赋予表格名，通常位于表格中间 -->
+       <caption>我的表格</caption>
+       <!-- tr标签，用来标识一行 -->
+       <tr>
+           <!-- td标签，用来标识一列 -->
+           <td>100</td>
+           <td>200</td>
+           <td>300</td>
+       </tr>
+       <tr>
+           <td>400</td>
+           <td>500</td>
+           <td>600</td>
+       </tr>
+   </table><br>
+   <!-- cite标签，标识一个引用 -->
+   <p>cite元素创建一个引用标记，用来指明某内容的引用或参考源，如书籍或杂志或新闻报道等的标题</p>
+   <p >--引至<cite ><a href="https://blog.csdn.net/ixygj197875/article/details/79860464" target="_blank">百度百科</a></cite></p><br>
+
+   <!-- <command onclick="alert('Hello World')">Click Me！</command> -->
+   
+   <details>
+       <summary>第一个details标题</summary>
+       <p>刚刚写的第一个details的详细内容信息。</p>
+   </details>
+   <!-- ul标签标识无序列表，ol标签标识有序列表，通常跟li标签一起用，注:使用ul
+    和ol标签时，标签前后自动换行 -->
+   <ul>
+       <li>无序第一个</li>
+       <li>无序第二个</li>
+       <li>无序第三个</li>
+   </ul>
+
+   <ol>
+       <li>有序第一个</li>
+       <li>有序第二个</li>
+       <li>有序第三个</li>
+   </ol>
+   <div>
+       <ul>
+           <li>
+               <h2>Web前端工程师</h2>
+               <p>
+                   <span>12000以上</span>
+                   <span>南山区</span>
+               </p>
+           </li>
+           <li>
+               <h2>前端工程师</h2>
+               <p>
+                   <span>10000-20000</span>
+                   <span>宝安区</span>
+               </p>
+           </li>
+           <li>
+               <h2>高级前端工程师</h2>
+               <p>
+                   <span>25000以上</span>
+                   <span>龙华区</span>
+               </p>
+           </li>
+       </ul>
+   </div>
+   <!-- 使用dl、dt、dd标签 -->
+   <!-- div块级标签可以定义块内全部的元素内容，内嵌标签可以通过重新定义改变元素的内容格式 -->
+   <div style="color: tomato; font-size: 12;">
+    <span style="color: turquoise;">下面是自定义列表dl</span>
+        <dl>
+            <dt style="color: violet;">定义列表d1</dt>
+            <dd>本列表是于3.23号完成的</dd>
+            <dd>本列表二是接下来完成的</dd>
+            <dt>定义列表d2</dt>
+            <dd>这是列表2的一个内容</dd>
+            <dd>这是列表2的下一个内容</dd>
+        </dl>
+   </div><hr>
+   <!-- 类同hr标签完成一套线的做法 -->
+   <!-- 使用div的空标签完成 -->
+   <div style="height: 1px; background-color: tomato;"></div>
+
+   <form method="GET">
+       <!-- form标签里面input文本类型 -->
+       姓名<input type="text" name="username" ><br>
+       年龄<input type="text" name="age" ><br>
+       <!-- form标签里面password类型,password类型浏览器自动用*号代替输入字符 -->
+       用户名<input type="text" name="username"><br>
+       密码<input type="password" name="password" ><br>
+       <!-- form标签里面复选框，多选按钮 -->
+       我喜欢苹果<input type="checkbox" name="like" value="apple"><br>
+       我喜欢小狗<input type="checkbox" name="like" value="dog"><br>
+       <!-- form标签里面单选按钮,单选按钮需要保证radio类型的name属性是一致的 -->
+       男<input type="radio" name="sex" value="male"><br>
+       女<input type="radio" name="sex" value="female"><br>
+       <!-- form标签里面简单的下拉列表 -->
+       <select name="animals" required="required">
+           <option value="dog">dog</option>
+           <option value="cat">cat</option>
+           <!-- option标签里面定义selected属性可以确定下拉列表的首选项 -->
+           <option value="tiger" selected="selected">tiger</option>
+       </select><br>
+       <!-- textarea标签定义一个文本区域内容，标签内不能嵌套其它标签 -->
+       <textarea name="textarea"  cols="30" rows="10" readonly="readonly">
+           <!-- 无效的p标签 -->
+           <p>这是文本区域内的第一段文字</p>
+       </textarea><br>
+       <!-- 使用input标签创建一个按钮 -->
+       <input type="button"  value="helloworld"><br>
+       <!-- 创建一个围绕数据的fieldset -->
+       <fieldset >
+           <legend>fieldestd的解释</legend>
+          fieldset第一次输入： <input type="text" >
+          fieldset第二次输入： <input type="text" >
+       </fieldset><br>
+       <div style="background-color: violet; height: 1px;"></div>
+
+       <!-- 创建一个带有输入框和确定按钮的表单 -->
+       <fieldset>
+           <legend>带有输入框和确定按钮的表单</legend>
+           username:
+           <br><input type="text" name="username" ><br>
+           password:
+           <br><input type="text" name="password" ><br>
+           <!-- 确定按钮的两种做法：1.使用button标签的type属性。2.使用input标签的type属性 -->
+           <button type="submit" name="submit">submit</button><br>
+           <input type="submit" name="submit">
+       </fieldset><br>
+       <!-- 创建一个带有多选框和确定按钮的表单 -->
+       <fieldset>
+           <legend>带多选框和确定按钮的表单</legend>
+           i have a bike <input type="checkbox" name="vehicle" value="bike" checked="checked"><br>
+           i have a car <input type="checkbox" name="vehicle" value="car"><br>
+           i hava a airplane <input type="checkbox" name="vehicle" value="airplane"><br>
+           <input type="submit" value="submit">
+           <button type="submit" name="submit">submit</button>
+       </fieldset><br>
+       <!-- 创建一个单选按钮和确定按钮的表单 -->
+       <fieldset>
+           <legend>带单选按钮和确定按钮的表单</legend>
+           男<input type="radio" name="sex" value="male"><br>
+           女<input type="radio" name="sex" value="female"><br>
+           <!-- input标签创建的确定按钮，如果未定义初始value值，则默认为：确定 -->
+           <input type="submit" name="submit" value="submit">
+           <button type="submit" >submit</button>
+       </fieldset>
+
+   </form>
+   <hr>
+   
+ 
+</body>
+</html>

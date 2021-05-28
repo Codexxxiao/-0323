@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双飞翼布局</title>
+    <!-- 双飞翼布局跟用float写的左边固定右边浮动的布局十分类似 -->
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        #outer{
+            height: 100%;
+            background-color: wheat;
+            
+            min-width: 510px;
+        }
+        #middle{
+            height: 100%;
+            background-color: aquamarine;
+
+            float: left;
+        }
+        #left{
+            width: 200px;
+            height: 100%;
+            background-color: yellowgreen;
+
+            float: left;
+            margin-left: -100%;
+        }
+        #right{
+            width: 200px;
+            height: 100%;
+            background-color: tomato;
+
+            float: left;
+            margin-left: -200px;
+        }
+        /* 加上左右外边距，把内容撑到中间来 */
+        #middle #c{
+            margin: 0 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="middle">
+            <div id="c">Maxime consequatur nesciunt nisi adipisci iusto. Sed pariatur animi error a. Et aut occaecati ipsam aperiam et est. Repudiandae qui voluptatibus non quam.
+ 
+Nisi voluptates aperiam maiores quibusdam aut placeat sunt occaecati. Ratione labore consequuntur iusto explicabo iste cumque voluptas. Quae mollitia voluptatum omnis ut. Nemo doloremque eos laudantium quod ut quasi maiores id.
+ 
+Tempore et sint ex quos labore hic voluptatum in labore. Sunt quam labore est dolorem maxime enim laboriosam in vitae. Distinctio accusantium consequuntur laborum ullam aut velit.</div>
+        </div>
+        <div id="left"></div>
+        <div id="right"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float对块状元素和行内元素的影响</title>
+    <!-- 
+        块状元素
+            不在独占一行，构成BFC，不在margin塌陷和margin合并
+
+        行内元素
+            可以设置宽高，完美支持margin和padding
+     -->
+    <style>
+        /* div{
+            text-align: center;
+        } */
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+            padding: 10px;
+
+            /* float: left; */
+        }
+        #span1{
+            width: 100px;
+            height: 100px;
+            /* line-height: 100px; */
+            background-color: yellow;
+            margin: 40px;
+            padding: 20px;
+            /* vertical-align: middle; */
+
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="box"></div>
+        <span id="span1">span1</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问题解析二</title>
+    <!-- 
+        问题二：块内元素只有一张图片的时候会出现不知名的空白
+        原因：图片是行内块状元素，会基于基线对齐
+        解决方法一：是其变成块状元素，就没有基线对齐的要求
+        解决方法二：在父级元素里面加上font-size=0
+        解决方法三：使用vertical-align=bottom
+     -->
+    <style>
+        div{
+            border:1px solid red;
+            /* 方法二 */
+            /* font-size: 0px; */
+        }
+        img{
+            /* 方法一： */
+            /* display: block; */
+            width: 400px;
+            /* 方法三 */
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../../1.png" alt="">
+    </div>
+</body>
+</html>

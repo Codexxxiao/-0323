@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类选择器</title>
+    <style type="text/css">
+    /* 通配符选择器 */
+     *{
+        color:blue;
+     }
+    /* 元素选择器 */
+         li{
+            background-color: red ;
+        }
+        /* !important用来提高样式规则的应用优先权，使用！important声明该样式具有最高优先级 */
+
+        /* li{
+            background-color: red !important;  ！important跟在样式属性的后面
+        } */
+        /* 类选择器 */
+        .show{
+            background-color: black;
+        }
+        /* 多类选择器，只有class里面同时有show和play时才能显示此样式 */
+        .show.play{
+            background-color: red;
+        }
+        .active{
+            background-color: yellow;
+        }
+        .con{
+            width: 100px;
+            height: 100px;
+        }
+        #idd{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        这是验证通配符选择器的一段文字
+    </p>
+    <!--
+       ！important>id选择器优先级>类选择器优先级>元素选择器优先级>通配符选择器
+    -->
+    <ul>
+        <li class="show" id="idd"></li>
+        <li></li>
+        <li id="idd" class="show"></li>
+        <li id="idd" class="show" style="background-color: white;"></li>
+        <!-- 多类选择，用空格分开 -->
+        <li  class="show play" ></li>
+    </ul>
+    <!-- 多类选择器的使用，中间用空格分隔 -->
+    <div  class="active con"></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>让图片在父级垂直居中</title>
+    <style>
+        .box{
+            height: 500px;
+            background-color: red;
+            line-height: 500px;
+        }
+        .box img{
+            height: 200px;
+            /* 
+                使用vertical-align在父级里面垂直居中
+                需要保证line-height的值跟height的值相同
+             */
+            /* vertical-align: middle; */
+            /* vertical-align: top;
+            vertical-align: bottom;
+            vertical-align: baseline; */
+        }
+        /* .box .p1{
+            font-size: 200px;
+        } */
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="../../1.png" alt="">
+    <b class="p1">哈哈哈哈</b>
+</div>
+</body>
+</html>

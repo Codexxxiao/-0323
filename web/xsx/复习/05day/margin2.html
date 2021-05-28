@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>父子元素的margin塌陷问题</title>
+    <style>
+        .father{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 100px;
+            margin-top: 100px;
+            /* 
+                方法一： 给父级设置一个边框，边框的宽度不能为0
+                    为了防止影响视觉，可以把颜色设置为transparent
+             */
+            border: 1px solid transparent;
+            /* 
+                方法二：开启BFC块级格式化上下文
+                overflow:hidden 
+             */
+            /* overflow: hidden; */
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-left: 50px;
+            /* 
+            本来需要离父级顶部50px,但是此时却跟父级上部粘起来了
+            当一个父级中第一个元素的margin-top会坍塌给父级
+            最后一个元素的margin-bottom会坍塌给父级
+            总结原因：父子嵌套的元素垂直方向的margin取最大值
+            
+             */
+            margin-top: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+<div id="top">
+    <div class="father"><div class="son"></div></div>
+    
+</div>
+</body>
+</html>

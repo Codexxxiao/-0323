@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动练习</title>
+    <!-- 
+        巧用左浮动和浮动
+            下一个元素不能超过超过上一个元素的最上面，如果一行中没有空间
+            排放，则自己另起一行，并保证始终跟在上一个元素的最下面。
+
+            记住左浮动的时候页面左边为前，右浮动的时候页面右边为前。
+     -->
+    <style>
+        body{
+            width: 1000px;
+            border: 1px solid red;
+            font-size: 30px;
+            text-align: center;
+        }
+        .erbai{
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        .sanbai{
+            width: 300px;
+            height: 300px;
+            float: left;
+        }
+        .sibai{
+            width: 400px;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="erbai" style="background-color: #cccccc;">200*200</div>
+    <div class="erbai" style="background-color: #666666;">200*200</div>
+    <div class="erbai" style="background-color: #EAEA00;">200*200</div>
+    <div class="erbai" style="background-color: #3CAE66;">200*200</div>
+    <div class="erbai" style="background-color: #44DEDE;">200*200</div>
+
+    <div class="sanbai" style="background-color: #8FE65B;">300*300</div>
+    <div class="sanbai" style="background-color: #A046AA;">300*300</div>
+
+    <div class="sibai" style="height: 150px; background-color: #5C6B72;">400*150</div>
+    <div class="sibai" style="height: 250px; background-color: #4FB99F;">400*250</div>
+    <div style="float: right; width: 600px; height: 100px; background-color: #167B5B;">600*100</div> 
+
+    <div style="float: left; width: 1000px; height: 80px; background-color: #143554;"></div>
+    
+</body>
+</html>

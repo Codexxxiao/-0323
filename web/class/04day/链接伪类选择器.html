@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--
+        a链接同时使用的情况下注意使用顺序
+        link visited hover active
+      -->
+    <title>链接伪类选择器</title>
+    <style>
+        /* 链接伪类选择器：只针对html中的a标签（具有href属性）
+        a:link：匹配a标签且a标签从未被访问过的情况下的样式设置
+        a:visited：匹配a标签且a标签链接被访问过的情况下的样式设置
+         */
+        a:link{
+            color: yellow;
+        }
+        a:visited{
+            color: red;
+        }
+        
+        /* 动态伪类选择器
+        E:hover：鼠标停留在E元素上时候的样式
+        E:active：E元素被激活时候的样式(基本情况就是鼠标点击的时候改变，鼠标松开恢复)
+         */
+        button:hover{
+            background-color: red;
+            
+        }
+        button:active{
+            background-color: black;
+        }
+
+        #username:hover{
+            height: 50px;
+        }
+        #username:active{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+        用户名<input type="text" id="username"><br>
+        <button type="submit">点击有惊喜！</button>
+    </body>
+    </form>
+    
+</html>

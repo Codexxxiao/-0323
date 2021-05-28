@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC的小练习</title>
+    <style>
+        div{
+            height: 50px;
+        }
+        #div1{
+            background-color: yellow;
+            margin: 10px 0;
+            
+        }
+        #div2{
+            background-color: gray;
+            margin: 10px 0;
+            /* 
+                产生外边距折叠，创建一个新的BFC
+             */
+             /* overflow: auto; */
+             /* overflow: hidden; */
+            
+             /* 
+                会将块状元素改为行内块状元素，行内块状元素没有默认的宽度为内容宽度
+              */
+             /* display: inline-block; */
+
+            /* 
+                positon
+                    值为absolute 的时候，宽度的默认值为内容的宽度
+                    值为fixed的时候，宽度的默认值为内容的宽度
+                    值为relative的时候，宽度的默认值自动填满父级宽度
+             */
+             /* position:absolute; */
+             /* position:fixed; */
+
+            /* float: left; */
+            /* float: right; */
+
+
+        }
+        #div3{
+             
+            margin: 10px 0;
+            height: 20px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">TOP</div>
+    <div id="div2">
+        <div id="div3">INNER</div>
+    </div>
+</body>
+</html>

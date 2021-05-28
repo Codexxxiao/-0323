@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二级菜单的练习</title>
+    <!-- 
+         知识点：
+            子绝父相搭建框架
+            dispaly:none（隐藏）
+            display:block（显示）
+            伪类hover（放上去的时候显示）
+     -->
+    <style>
+        ul{
+            position:relative;
+            margin: 0px auto;
+            padding: 0px;
+            list-style-type:none;
+            width: 150px;
+            background-color: hotpink;
+        }
+        ul li{
+            height: 30px;
+            line-height: 30px;
+            width: 150px;
+            margin-top:10px;
+            background-color: lightsalmon;
+            text-align:center;
+        }
+        ul li a{
+            color: white;
+            text-decoration:none;
+
+        }
+        ul li div{
+            position: absolute;
+            left: 150px;
+            top: 0;
+            width: 200px;
+            top: 0px;
+            bottom: 0px;
+            font-size: 30px;
+            color: white;
+            border: 1px solid green;
+            background-color: hotpink;
+
+            display: none;
+        }
+        ul li:hover div{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">喜欢的女星一</a>
+            <div>赵丽颖</div>
+        </li>
+        <li>
+            <a href="#">喜欢的女星二</a>
+            <div>迪丽热巴</div>
+        </li>
+        <li>
+            <a href="#">喜欢的女星三</a>
+            <div>刘亦菲</div>
+        </li>
+        <li>
+            <a href="#">喜欢的女星四</a>
+            <div>杨幂</div>
+        </li>
+    </ul>
+</body>
+</html>

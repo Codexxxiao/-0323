@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本阴影的练习</title>
+    <style>
+        body{
+            background-color: #E4E4E4;
+        }
+        #span1{
+            display: block;
+            font-size: 50px;
+            font-weight: bold;
+            color: #E4E4E4;
+            /* lfshadow:负数向左，正数向右 
+                tbshadow:负数向上，正数向下
+            */
+            text-shadow: 1px 1px 0 black,-1px -1px 0 white;
+        }
+        #span2{
+            display: block;
+            font-size: 50px;
+            font-weight: bold;
+            color: #E4E4E4;
+            /* lfshadow:负数向左，正数向右 
+                tbshadow:负数向上，正数向下
+            */
+            text-shadow: 1px 1px 0 white,-1px -1px 0 black;  
+        }
+        #span3{
+            display: block;
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /* lfshadow:负数向左，正数向右 
+                tbshadow:负数向上，正数向下
+            */
+            text-shadow: 0px 0px 1px green,
+            0px 0px 3px green, 
+            0px 0px 5px green, 
+            0px 0px 7px green, 
+            0px 0px 9px green, 
+            0px 0px 11px green;
+        }
+        #span4{
+            display: block;
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            /* lfshadow:负数向左，正数向右 
+                tbshadow:负数向上，正数向下
+            */
+            text-shadow: 0px 1px 0px #E7E7E7,
+            0px 2px 0px #E7E7E7, 
+            0px 3px 0px #E7E7E7, 
+            0px 4px 0px #E7E7E7, 
+            0px 5px 0px #E7E7E7, 
+            0px 4px 10px black;
+        }
+    </style>
+</head>
+<body>
+    <span id="span1">这是一段文字</span>
+    <span id="span2">这是一段文字</span>
+    <span id="span3">这是一段文字</span>
+    <span id="span4">这是一段文字</span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>skew样式</title>
+    <!-- 
+        使用transform之后产生的位移或者变形不会对其它元素
+        产生影响，但是会保留原来的位置
+        transform所有的行为都是相对于元素本身。
+     -->
+    <style>
+        div{
+            width: 400px;
+            height: 200px;
+            border: 1px solid red;
+
+        }
+        #div0{
+            
+            /* transform: skewx(10px,10px); */
+            transform: translate(300px,300px) rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <!-- <div>123213
+        </div> -->
+    </div>
+    <div>123213
+    </div>
+    <div>123213
+    </div>
+</body>
+</html>

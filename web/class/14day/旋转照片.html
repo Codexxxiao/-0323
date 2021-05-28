@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旋转照片</title>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            position: relative;
+            height: 100%;
+        }
+        #div0{
+            position: absolute;
+            width: 300px;
+            height: 350px;
+            left: 200px;
+            top: 200px;
+            /* border: 1px solid red; */
+            box-shadow: #CECDCD 1px 1px 0,
+            #CECDCD 2px 2px 0,
+            #CECDCD 3px 3px 0,
+            #CECDCD 4px 4px 0,
+            #CECDCD 5px 5px 0,
+            black 4px 4px 10px;
+
+            transform:rotate(20deg) scale(1);
+            transition-property: transform;
+            transition-duration: 1s;
+        }
+        #div0:hover{
+            transform:rotate(0deg) scale(1.5);
+            
+        }
+        #div1 {
+            width: 250px;
+            height: 300px;
+            margin: 10px auto 0;
+            /* border: 1px solid green; */
+            background-image: url('./3638f61d8a1d4ea0b5e2e3b180353c6a.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+        #div0 h2{
+            margin: 0;
+            padding: 0;
+            /* font-size: 16px; */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div id="div1">
+        </div>
+        <h2>清纯小美女</h2>
+    </div>
+</body>
+</html>

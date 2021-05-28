@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 
+            link引入和@import引入的区别：
+            1.功能范围：link是html标签，@import是css提供引入css的功能
+            2.加载顺序：link引入的css会同时别加载，@import引入的只有等页面加载完成之后在加载，因此会出现闪烁
+            3.兼容性：link所有浏览器都支持，@import低版本ie不支持
+            4.使用js控制样式，js只能控制link标签，@import是不能被控制的
+         -->
+        <title>css引入的两种方法-css-xsx</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="1css.css">
+        <style type="text/css">
+        /* @import "2css.css"; */
+        @import url(2css.css);
+        </style>
+
+    </head>
+    <body>
+        <li class="b"></li>
+        <li class="b"></li>
+        <li class="b"></li>
+        <li class="b"></li>
+        <li class="a"></li>
+        <li class="a"></li>
+        <li class="a"></li>
+        <li class="a"></li>
+        <li class="a"></li>
+    </body>
+</html>

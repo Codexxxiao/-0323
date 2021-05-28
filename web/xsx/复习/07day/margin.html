@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin对块状元素和行内元素的影响</title>
+    <!-- 
+        margin对块状元素的上下左右外边距都能影响
+        margin对行内元素只有左右外边距有影响，上下外边距设置值但是浏览器不会计息出来
+     -->
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            margin: 100px;
+        }
+        span{
+            border: 1px solid green;
+            background-color: black;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <span>123</span>123
+</body>
+</html>

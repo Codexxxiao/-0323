@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>表单新属性</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <!-- 
+            autocomplete:
+                off：关闭浏览器自带的表单提交记录
+                on：（默认值）开启表单的提交记录
+            
+            注意：表单里面需要有一个name值，用来传输参数
+         -->
+        <!-- <input type="text" autocomplete="off" name="hello" list="beauty">
+        <datalist id="beauty">
+            <option value="a">
+            <option value="b">
+            <option value="c">
+            <option value="d">
+            <option value="e">
+        </datalist> -->
+        <!-- <input type="email" name="email"><br>
+        <input type="date" name="date"><br> -->
+        <!-- 
+            autofocus：使拥有该属性的输入框自动获得焦点
+            注意：一般一个页面只存在一个
+         -->
+        <<!-- input type="text" name="email" autofocus><br> -->
+        <!-- 提示用户可以输入的内容，获得焦点后自动消失 -->
+        <input type="text" name="userName" placeholder="请输入用户名">
+        <input type="password" name="passwd" placeholder="请输入密码">
+        <button type="submit">注册</button>
+    </form>
+</body>
+</html>

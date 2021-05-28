@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习二</title>
+    <!-- 
+        label标签是行内元素
+            before after伪元素选择器的content也是行内元素
+     -->
+    <style>
+        #checkbox{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        #checkbox li input[type='checkbox']{
+            display: none;
+        }
+        #checkbox li{
+            margin-top: 10px;
+        }
+        #checkbox li label{
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            color: white;
+            padding-right: 10px;
+            background-color:black;
+        }
+        #checkbox li label::before{
+            content: '×';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        } 
+        #checkbox li input:checked+label::before{
+            content: '√';
+        } 
+        #checkbox li input:checked+label{
+            background-color: coral;
+        } 
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <ul id="checkbox">
+            <li>
+                <input type="checkbox" name="say[]" value="say1" id="say1"><label for="say1">say1</label>
+            </li>
+            <li>
+                <input type="checkbox" name="say[]" value="say2" id="say2"><label for="say2">say2</label>
+            </li>
+            <li>
+                <input type="checkbox" name="say[]" value="say3" id="say3"><label for="say3">say3</label>
+            </li>
+            <li>
+                <input type="checkbox" name="say[]" value="say4" id="say4"><label for="say4">say4</label>
+            </li>
+            <li>
+                <input type="checkbox" name="say[]" value="say5" id="say5"><label for="say5">say5</label>
+            </li>
+        </ul>
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>

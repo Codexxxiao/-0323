@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问题解析一</title>
+    <!-- 
+        问题：行内元素之间出现空白
+        html会把空格和换行都当成空格处理，所以行内元素会出现空白
+        处理方法：在父级元素中加上font-size:0px;
+     -->
+    <style>
+        body{
+            font-size: 0px;
+        }
+        span{
+            background-color: black;
+            font-size:100px;
+        }
+        .blue{
+            color: #1B6FEF;
+        }
+        .red{
+            color: #DB4732;
+        }
+        .yellow{
+            color: #FFD669;
+        }
+        .green{
+            color: #009A57;
+        }
+    </style>
+</head>
+<body>
+    <span class="blue">G</span>
+    <span class="red">o</span>
+    <span class="yellow">o</span>
+    <span class="blue">g</span>
+    <span class="green">l</span>
+    <span class="red">e</span>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apple-title</title>
+    <link rel="stylesheet" href="./appleHeader/iconfont.css" type="text/css">
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            width: 100%;
+            background-color: black;
+        }
+            header ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+
+            display: flex;
+        }
+        header #ul2{
+            display: none;
+        }
+        header #ul1 li{
+            width: 40px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        header #ul1 li>.iconfont{
+            color: white;
+        }
+        header #ul1 li:nth-child(2){
+            flex-grow: 1;
+        }
+
+        @media (min-width:768px){
+            header #ul1{
+                display: none;
+            }
+            header #ul2{
+                display: flex;
+                justify-content: space-between;
+            }
+            header #ul2 li{
+            width: 42px;
+            height: 40px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            header #ul2 li>div{
+                color: white;
+            }
+            header #ul2 .font{
+                flex-grow: 1;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul id="ul1">
+            <li><div class="iconfont"> &#xe789;</div></li>
+            <li><div class="iconfont">&#xe63d;</div></li>
+            <li><div class="iconfont">&#xe725;</div></li>
+        </ul>
+        <ul id="ul2">
+            <li><div class="iconfont">&#xe63d;</div></li>
+            <li class="font"><div >Mac</div></li>
+            <li class="font"><div>iPad</div></li>
+            <li class="font"><div>iPhone</div></li>
+            <li class="font"><div>Watch</div></li>
+            <li class="font"><div>Music</div></li>
+            <li class="font"><div>技术支持</div></li>
+            <li class="font"><div class="iconfont">&#xe616;</div></li>
+            <li><div class="iconfont">&#xe725;</div></li>
+        </ul>
+    </header>
+</body>
+</html>

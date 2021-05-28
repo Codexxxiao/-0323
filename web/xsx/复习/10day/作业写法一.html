@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 2500px;
+            /* border: 1px solid black; */
+            list-style-type: none;
+        }
+        ul::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        #outer{
+            width: 500px;
+            height: 700px;
+           /*  border: 1px solid red; */
+            margin: 0 auto;
+            text-align: center;
+        }
+        #inner{
+            width: 500px;
+           /*  border: 1px solid green; */
+            overflow: hidden;
+        }
+    
+        #inner ul li{
+            float: left;
+        }
+
+        #inner ul li img{
+            width: 500px;
+        }
+
+        #outer a img{
+            width: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner">
+            <ul>
+                <li id="img1"><img src="./kof-01.jpg" alt=""></li>
+                <li id="img2"><img src="./kof-02.jpg" alt=""></li>
+                <li id="img3"><img src="./kof-03.jpg" alt=""></li>
+                <li id="img4"><img src="./kof-04.jpg" alt=""></li>
+                <li id="img5"><img src="./kof-05.jpg" alt=""></li>
+            </ul>
+        </div>
+        <a href="#img1"><img src="./kof-01.jpg" alt=""></a>
+        <a href="#img2"><img src="./kof-02.jpg" alt=""></a>
+        <a href="#img3"><img src="./kof-03.jpg" alt=""></a>
+        <a href="#img4"><img src="./kof-04.jpg" alt=""></a>
+        <a href="#img5"><img src="./kof-05.jpg" alt=""></a>
+    </div>
+</body>
+</html>

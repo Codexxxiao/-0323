@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>水滴练习</title>
+    <style>
+        div{
+            position: relative;
+            margin-top: 50px;
+            width: 300px;
+            height: 300px;
+            /* border: 1px solid red; */
+            filter: contrast(2000%);
+            background-color: white;
+            
+        }
+        div::before,div::after{
+            position: absolute;
+            content: '';
+            border-radius: 50%;
+            filter: blur(10px);
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        div::before{
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+          
+        }
+        div::after{
+            left: 100px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

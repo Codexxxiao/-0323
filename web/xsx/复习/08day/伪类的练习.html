@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>使用伪类实现标题栏下弹的特效</title>
+    <!-- 
+        包含块
+            absolute:离它最近的拥有定位属性的元素（不包含static）
+            fixe：它的包含块是viewport（窗口）
+            relative：离它最近的祖先元素
+     -->
+    <!-- 
+        用列表里面嵌套列表来实现标题的探出
+     -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .outer{
+            /* display: inline-block; */
+            float: left;
+            position: relative;
+            width: 300px;
+            border: 1px solid black;
+        }
+        .outer p{
+            font-size: 20px;
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: deepskyblue;
+        }
+        .outer .con{
+            position: absolute;
+            width: 400px;
+            top: 50px;
+            background-color: red;
+
+            display: none;
+        }
+        /* .outer::after{
+            content: " ";
+            display: block;
+            height: 0;
+            clear: both;
+        } */
+
+        .outer:hover>ul{
+            display: block;
+        }
+        .outer .con li:hover{
+            background-color: hotpink;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: rosybrown;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <ul class="outer_father">
+        <li class="outer">
+            <p>这是文章标题</p>
+            <ul class="con">
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+            </ul>
+        </li>
+        <li class="outer">
+            <p>这是文章标题</p>
+            <ul class="con">
+                <li>123</li>
+                <li>123</li>
+                <li>123</li>
+            </ul>
+        </li>
+    </ul>
+    <div></div>
+</body>
+</html>

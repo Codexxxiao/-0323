@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习2</title>
+    <style>
+        #outer{
+            width: 120px;
+            border: 1px solid red;
+        }
+        .div1{
+            display: inline-block;
+            width: 35px;
+            height: 40px;
+            border: 1px solid green;
+
+            background-repeat: no-repeat;
+            background-image: url('./sprite.png');
+            background-position: -170px;
+        }
+        .div2{
+            width: 28px;
+            height: 28px;
+        }
+        .div3{
+            /* width: 28; */
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div class="div1">
+            <div class="div2" id="hfp"></div>
+            <div class="div3" id="hf"><a href="#">话费</a></div>
+        </div>
+    </div>
+</body>
+</html>

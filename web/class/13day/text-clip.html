@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background-clip</title>
+    <style>
+        div{
+            background: url('./20150522042530953.jpg');
+        }
+        h1{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            height: 600px;
+            width: 1000px;
+            line-height: 600px;
+            font-size: 100px;
+            background:url('./1558273090-lIPSAHzKmv.jpg') no-repeat;
+            /* 背景剪切
+                background-clip
+                    border-box
+                    padding-box
+                    content-box
+                    text
+             */
+            background-clip:text;
+            -webkit-background-clip: text;
+            color: transparent;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>xxxxsx</h1>
+    </div>
+</body>
+</html>

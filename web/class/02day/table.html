@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table标签实用</title>
+    <meta name="keywords" content="table,word">
+    <meta name="discription" content="table标签的实用教程">
+</head>
+<body>
+
+    <a href="./login.html" target="_self">重新登录</a>
+
+    <hr>
+
+    <!-- colspan单元格的跨列合并、rowspan单元格的跨行合并 -->
+    <table width="400" border="1" cellpadding="10" cellspacing="10">
+        <caption>0323班就业薪资</caption>
+        <tr>
+            <th>姓名</th>
+            <th colspan="2">就业薪资</th>
+            <th>备注</th>
+        </tr>
+        <tr>
+            <td>小王</td>
+            <td rowspan="2">12k</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>小明</td>
+            <td>14k</td>
+            <td></td>
+        </tr>
+    </table>
+    <hr><br>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2" rowspan="2"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr><br>
+    <!-- 表格的优化：thead\tbody\tfoot-->
+    <!-- 
+        thead 表格头，用来放标题之类
+        tbody 表格正文，用来放数据本体
+        tfoot 表格的脚，放表格的脚注之类
+     -->
+    <table border="1" cellpadding="10" cellspacing="10">
+        <caption>表格的优化</caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>班级</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>谢赛孝</td>
+                <td>100</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>陈勇凯</td>
+                <td>100</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>许开镇</td>
+                <td>100</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <p>
+        &lt;1&gt;&nbsp;&nbsp;&nbsp;&copy;&quot;
+    </p>
+    
+<div>
+    <!--em对某一个关键词强调-->
+    <span>我<em>喜欢</em>男的！！！</span>
+    <span>我喜欢<em>男的</em>！！！</span>
+
+    <!--strong代表更强:比如 对某一句话直接强调-->
+    <strong>警告:你们老师喜欢男的!!!</strong>
+
+    <!--var标签 -->
+    <p>小明有<var>x</var>个苹果，一天吃一个，一天吃完，请问<var>x</var>等于几</p>
+    <p><var>x</var>+<var>y</var>=12</p>
+</div>
+<hr>
+<div>
+    <h2>学习iframe标签</h2>
+    <div>
+        哈哈哈
+        <iframe src="http://www.baidu.com" frameborder="1" width="600"></iframe>
+    </div>
+</div>
+
+</html>

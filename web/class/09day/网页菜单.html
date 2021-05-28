@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页菜单制作</title>
+    <style>
+        .clearFire::after{
+            content: "";
+            height: 0px;
+            display: block;
+            clear: both;
+        }
+        
+        #menu{
+            position: relative;
+            width: 210px;
+            background-color: #FAFAFA;
+            /* border: 1px solid red; */
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li{
+            width: 210px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 20px;
+        }
+        #menu li>a{
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+       
+        #menu .menu-con{
+            position: absolute;
+            width: 710px;
+            left: 210px;
+            border: 1px solid black;
+            background-color: #F7F7F7;
+            top: 0px;
+            bottom: 0px;
+            border: 1px solid #DDDDDD;
+
+            display: none;
+        }
+        #menu li:hover .menu-con{
+            display: block;
+        }
+
+        #menu .menu-con dl{
+            font-size: 12px;
+            width: 650px;
+            /* border: 1px solid red; */
+            margin: 0;
+        }
+        #menu .menu-con dt{
+            float: left;
+            width: 60px;
+            font-weight: bold;
+            margin-left: 5px;
+            /* border: 1px solid black; */
+            padding-right: 6px;
+            text-align: right;
+        }
+        #menu .menu-con dd{
+            width: 415px;
+            float: left;
+            margin: 0px;
+        }
+        #menu .menu-con a{
+            text-decoration: none;
+            color: #333;
+            padding: 0 8px;
+            border-left: 1px solid #CCCCCC;
+        }
+        #menu .menu-con a:hover{
+            color: red;
+        }
+        #menu .menu-con .clearBorder{
+            border: none;
+            padding: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>
+            <a href="#">图书、音像、数字商品</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">家用电器</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书1</a></dt>
+                    <dd>
+                    <a href="">免费</a>
+                    <a href="">小说</a>
+                    <a href="">励志与成功</a>
+                    <a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经营</a>
+                    <a href="">有声读物</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">数字音乐</a></dt>
+                    <dd>
+                    <a href="">通俗流行</a>
+                    <a href="">古典音乐</a>
+                    <a href="">摇滚说唱</a>
+                    <a href="">爵士蓝调</a>
+                    <a href="">乡村民谣</a>
+                    <a href="">有声读物</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">音像</a></dt>
+                    <dd>
+                    <a href="">音乐</a>
+                    <a href="">影视</a>
+                    <a href="">教育音像</a>
+                    <a href="">游戏</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">文艺</a></dt>
+                    <dd>
+                    <a href="">小说</a>
+                    <a href="">文学</a>
+                    <a href="">青春文学</a>
+                    <a href="">传记</a>
+                    <a href="">艺术</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">人文社科</a></dt>
+                    <dd>
+                    <a href="">历史</a>
+                    <a href="">心理学</a>
+                    <a href="">政治/军事</a>
+                    <a href="">国学/古籍</a>
+                    <a href="">哲学/宗教</a>
+                    <a href="">社会科学</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">经管励志</a></dt>
+                    <dd>
+                    <a href="">经济</a>
+                    <a href="">金融与投资</a>
+                    <a href="">管理</a>
+                    <a href="">励志与成功</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">生活</a></dt>
+                    <dd><a href="">家庭与育儿</a>
+                    <a href="">旅游/地图</a>
+                    <a href="">美食</a>
+                    <a href="">时尚/美妆</a>
+                    <a href="">家居</a>
+                    <a href="">婚恋与两性</a>
+                    <a href="">娱乐/优先</a>
+                    <a href="">健康与保健</a>
+                    <a href="">动漫/幽默</a>
+                    <a href="">体育/运动</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">手机、数码、充值</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">电脑、办公</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书1</a></dt>
+                    <dd>
+                    <a href="">免费</a>
+                    <a href="">小说</a>
+                    <a href="">励志与成功</a>
+                    <a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经营</a>
+                    <a href="">有声读物</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">数字音乐</a></dt>
+                    <dd>
+                    <a href="">通俗流行</a>
+                    <a href="">古典音乐</a>
+                    <a href="">摇滚说唱</a>
+                    <a href="">爵士蓝调</a>
+                    <a href="">乡村民谣</a>
+                    <a href="">有声读物</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">音像</a></dt>
+                    <dd>
+                    <a href="">音乐</a>
+                    <a href="">影视</a>
+                    <a href="">教育音像</a>
+                    <a href="">游戏</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">文艺</a></dt>
+                    <dd>
+                    <a href="">小说</a>
+                    <a href="">文学</a>
+                    <a href="">青春文学</a>
+                    <a href="">传记</a>
+                    <a href="">艺术</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">人文社科</a></dt>
+                    <dd>
+                    <a href="">历史</a>
+                    <a href="">心理学</a>
+                    <a href="">政治/军事</a>
+                    <a href="">国学/古籍</a>
+                    <a href="">哲学/宗教</a>
+                    <a href="">社会科学</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">经管励志</a></dt>
+                    <dd>
+                    <a href="">经济</a>
+                    <a href="">金融与投资</a>
+                    <a href="">管理</a>
+                    <a href="">励志与成功</a>
+                    </dd>
+                </dl>
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">生活</a></dt>
+                    <dd><a href="">家庭与育儿</a>
+                    <a href="">旅游/地图</a>
+                    <a href="">美食</a>
+                    <a href="">时尚/美妆</a>
+                    <a href="">家居</a>
+                    <a href="">婚恋与两性</a>
+                    <a href="">娱乐/优先</a>
+                    <a href="">健康与保健</a>
+                    <a href="">动漫/幽默</a>
+                    <a href="">体育/运动</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">家居、家具、家装、厨具</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">服饰内衣</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">个护化妆</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">运动健康</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">汽车用品</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">彩票、旅行</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">理财、众筹</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">母婴、玩具</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">箱包</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">运动户外</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+        <li>
+            <a href="#">箱包</a>
+            <div class="menu-con">
+                <dl class="clearFire">
+                    <dt><a href="" class="clearBorder">电子书</a></dt>
+                    <dd><a href="">婚恋/两性</a>
+                    <a href="">文学</a>
+                    <a href="">经管</a>
+                    <a href="">畅读vip</a></dd>
+                </dl>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

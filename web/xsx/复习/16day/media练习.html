@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>media练习</title>
+    <link rel="stylesheet" href="./font/iconfont.css" type="text/css">
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            background-color: #2D4373;
+            color: white;
+            overflow: hidden;
+        }
+        header h2{
+            margin: 0;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: #3B5998;
+        }
+        header>div{
+            height: 30px;
+            line-height: 30px;
+            background-color: #3B5998;
+
+            margin: 8px 8px 0;
+            font-size: 12px;
+            text-align: center;
+            border-radius: 3px;
+        }
+        header form{
+            position: relative;
+            margin: 8px;
+        }
+        header form input{
+            width: 100%;
+
+            height: 40px;
+            background-color: #CBD9F5;
+            text-align: center;
+            border: 0;
+            border-radius: 3px;
+            outline: none;
+            box-sizing: border-box;
+        }
+        header form button{
+            position: absolute;
+            right: 3px;
+            width: 60px;
+            height: 40px;
+            border: 0;
+            outline: none;
+            background-color: #CBD9F5;
+        }
+
+        @media (min-width:768px){
+   
+            header h2{
+                float: left;
+                width: 25%;
+                height: 40px;
+                font-size: 20px;
+                line-height: 40px;
+                box-sizing: border-box;
+            }
+            header h2 ::after{
+                display: block;
+                content: '';
+                clear: both;
+            }
+            header>div{
+                float: left;
+                width: 25%;
+                margin: 0;
+                height: 40px;
+                line-height: 40px;
+                box-sizing: border-box;
+                border-radius: 0;
+            }
+            header>form{
+                box-sizing: border-box;
+
+            }
+            header>form input{
+                margin-top: 10px;
+                width: 100%;
+            }
+            header>form button{
+                margin-top: 10px;
+            }
+
+        }
+
+        @media(min-width:992px){
+            header{
+                display: flex;
+            }
+            header>h2{
+                width: 20%;
+            }
+            header>div{
+                width: 20%;
+            }
+            header>form{
+                display: flex;
+                width: 20%;
+                margin: 0;
+                background-color: #3B5998;
+            }
+            header>form input{
+                margin: 0;
+                margin-right: 10px;
+                border-radius: 0;
+                height: 30px;
+                padding: 0;
+                align-self: center;
+                border-radius: 3px;
+
+            }
+            header>form button{
+                margin: 0;
+                margin-right: 10px;
+                height: 30px;
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>IBiji.Tech</h2>
+        <div>系列教程</div>
+        <div>实例教程</div>
+        <div>工具推荐</div>
+        <form action="#" method="GET">
+            <input type="text" placeholder="分享技术成就你我！">
+            <button class="iconfont">&#xe60d;</button>
+        </form>
+    </header>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片的绝对居中</title>
+    <style>
+        div{
+            width: 500px;
+            /* 
+                设置高度和行高相同
+             */
+            height: 500px;
+            line-height: 500px;
+            border: 1px dotted red;
+            text-align: center;
+
+            /* 
+                当只有图片一个元素的时候，图片的绝对居中
+             */
+            font-size: 0px;
+        }
+        img{
+            width: 200px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="../../1.png" alt="图片">
+    </div>
+</body>
+</html>

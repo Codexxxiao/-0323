@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin合并</title>
+    <!-- 
+        兄弟块状元素之间，上面元素的margin-bottom:value和
+        下面元素的margin-top:value只会取其中最大值，而不会实现累加
+     -->
+    <style>
+        .one{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            margin-bottom: 100px;
+        }
+        .two{
+            height: 50px;
+            width: 50px;
+            background-color: red;
+            /* 
+                方法二：修改其中的margin-top或者margin-bottom变为需要的值
+             */
+            margin-top: 200px;
+        }
+        /* 
+            方法一：使用BFC（块状格式化上下文）
+            使用这个需要改变下面元素的代码结构,但这种方法实现了top和bottom的边距累加
+            父级元素把内部块状元素格式化上下文（理解为什么放在父级元素中）
+         */
+        .wrap{
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <!-- 
+        因为使用overflow:hidden而修改的代码结构
+     -->
+    <div class="wrap"><div class="two"></div></div>
+    <!-- <div class="two"></div> -->
+</body>
+</html>

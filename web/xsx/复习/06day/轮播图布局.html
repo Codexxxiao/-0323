@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .outer{
+            width: 520px;
+            border: 1px solid #5df2ff;
+            margin: 100px auto 0;
+            position: relative;
+        }
+        .inner{
+            width: 520px;
+            overflow-x: scroll;
+        }
+        .con{
+            width: 2600px;
+            /* overflow: hidden; */
+        }
+        .con img{
+            width: 520px;
+            height: 280px;
+            float: left;
+        }
+        .left{
+            width: 30px;
+            height: 30px;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .right{
+            width: 30px;
+            height: 30px;
+            font-size: 24px;
+            line-height: 30px;
+            text-align: center;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .page{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            /*让元素向左移动自身的一半*/
+            transform: translateX(-50%);
+        }
+        .page li{
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255,255,255,.4);
+            border-radius: 50%;
+            float: left;
+            margin: 3px;
+        }
+        .page .active{
+            background-color: rgba(255,255,255,1);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <div class="con">
+                <img src="../../../1.png" alt="">
+                <img src="../../../1.png" alt="">
+                <img src="../../../1.png" alt="">
+                <img src="../../../1.png" alt="">
+                <img src="../../../1.png" alt="">
+            </div>
+            <p class="left">&lt;</p>
+            <p class="right">&gt;</p>
+            <ul class="page">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

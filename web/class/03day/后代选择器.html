@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>后代选择器</title>
+    <!-- 后代选择器
+        注意：后代中与父代相同的属性会被父代属性覆盖，不同的属性后代才能自己拥有
+        跟人一样，注定拥有父代的一些属性，同时又有自己的一些特点。
+     -->
+    <style type="text/css">
+    /*  */
+        /* .box li{
+            background-color: red;
+        }
+        div li{
+            background-color: pink;
+        } */
+        .show{
+            background-color: violet;
+            height: 100px;
+        }
+        .box .show{
+            background-color: yellow;
+            
+        } 
+        .outer .show{
+            background-color: blue;
+        } 
+        html body div .show{
+            background-color: teal;
+        }
+        /* html body .outer .show{
+            background-color: teal;
+        } */
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <p>p1</p>
+        <p>p2</p>
+        <span>span1</span>
+        <ul class="box">
+            <li>111</li>
+            <li class="show">222</li>
+        </ul>
+        <ol>
+        </ol>
+        <li>333</li>
+        <li>444</li>
+    </div>
+
+</body>
+</html>

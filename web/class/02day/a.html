@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position定位</title>
+    <style type="text/css">
+        h2.pos_left{
+            position: relative;
+            left: -20px;
+        }
+        h2.pos_right{
+            position: relative;
+           left: 20px;
+        }
+        h2.pos_abs{
+            position: absolute;
+            left: 100px;
+            top: 150px;
+        }
+        h2.pos_fix{
+            position: fixed;
+            right: 0;
+            top: 100px;
+        }
+        /* z-index属性修改标签内容原本存在的优先级，可通过赋值-1将原本优先级降低 */
+        img.x{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 0;
+        }
+        a.top{
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h2>这是一个正常位置的标签</h2>
+    <h2 class="pos_left">这个标签相对向左移动</h2>
+    <h2 class="pos_right">这个标签相对向右移动</h2>
+    <h2 class="pos_abs">这是一个绝对定位的标题</h2>
+    <h2 class="pos_fix">这是一个相对浏览器绝对定位的标题</h2>
+    <hr>
+    <br><br><br><br><hr>
+    <!-- <div>
+        <img src="/1.png" alt="这是一张图片" class="x" title="这是一张图片">
+        <h2>这是一个新的标题</h2>
+    </div> -->
+    <!-- a标签的其它功能 -->
+    <div>
+        <!-- 返回顶部 -->
+        <a href="#" class="top">点我返回顶部</a>
+        <!-- 下载功能
+        注：a标签里面必须书写href属性，哪怕是为空
+        可以给a标签一个download属性，书写下载文件路径
+        -->
+        <a href="" download="/1.png">点我下载图片</a><br>
+        <!-- 
+            a标签对电话，短信，邮箱的支持，主要体现在移动端
+            1.a标签打电话tel:电话号码
+            2.a标签发短信sms:电话号码
+            3.a标签发邮箱mailto:邮箱地址
+         -->
+        <a href="tel:18979487185">给谢赛孝打电话</a><br>
+        <a href="sms:18979481785">给谢赛孝发短信</a><br>
+        <a href="mailto:1659812077@qq.com">给谢赛孝发邮箱</a>
+    </div>
+    <hr style="background-color: blue;height: 10px;">
+    <br style="height: 100px;">
+    <p>这是一段文字</p><br>
+    <p>这是一段文字</p>
+
+    <div style="background-color: yellow;width: 1920px;height: 1080px;">
+    <p>这是一个看像素大小的案例</p>
+</div>
+</body>
+</html>

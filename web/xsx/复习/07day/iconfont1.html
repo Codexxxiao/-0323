@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阿里矢量字体方法一</title>
+    <style>
+        /* 
+            导入矢量字体，取名为iconfont
+         */
+        @font-face {
+        font-family: 'iconfont';
+        src: url('../iconfont/iconfont.eot');
+        src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../iconfont/iconfont.woff2') format('woff2'),
+        url('../iconfont/iconfont.woff') format('woff'),
+        url('../iconfont/iconfont.ttf') format('truetype'),
+        url('../iconfont/iconfont.svg#iconfont') format('svg');}
+        
+        /* 
+            定义使用iconfont样式，并设置为!important
+         */
+        .iconfont {
+        font-family: "iconfont" !important;
+        font-size: 50px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body>
+    <span class="iconfont">&#xe656;</span>
+    <span class="iconfont">&#xe6f5;</span>
+</body>
+</html>

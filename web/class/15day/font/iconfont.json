@@ -1,0 +1,16 @@
+{
+  "id": "2488010",
+  "name": "搜索",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "19689765",
+      "name": "搜 索",
+      "font_class": "sousuo_huaban1",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    }
+  ]
+}

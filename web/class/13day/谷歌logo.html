@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>谷歌logo制作</title>
+    <style>
+        div{
+            position: relative;
+            margin: 50px auto 0;
+            width: 400px;
+            height: 400px;
+            border: 1px solid red;
+
+            background-image: linear-gradient(red 0%,red 33%,transparent 33%);
+        }
+        div::before{
+            position: absolute;
+            content: '';
+            height: 350px;
+            width: 200px;
+            left: 0;
+            bottom: 0;
+            background-image: linear-gradient(to right top,green 0%,green 50%,transparent 50%);
+        }
+        div::after{
+            position: absolute;
+            content: '';
+            width: 75%;
+            height: 66%;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

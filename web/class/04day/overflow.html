@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow属性</title>
+    <style>
+        .outer{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            /* 
+            overflow:元素超过父元素之后如何显示，不会影响父级的兄弟元素位置
+                visible：默认值，内容不会修剪，显示在元素的框外
+                hidden:超出内容被修剪，修剪内容不可见
+                scroll:超出部分被修剪，浏览器显示滚动条方便查看
+                auto:；浏览器自动定夺，如果内容超出就生成，否则不生成
+             */
+            overflow: visible;
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* overflow: auto; */
+            /* 
+                overflow-x和overflow-y只控制x和y超出情况
+             */
+            /* overflow-x: hidden; */
+            /* overflow-y: hidden; */
+        }
+        .con{
+            width: 400px;
+            height: 200px;
+            background-color: pink;
+        }
+        .bottom{
+            height: 400px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="con">
+            今天天气真好今天天气真好今天天 今天天气真好今天天气真好今天天 今天天气真好今天天气真好今天天 今天天气真好今天天气真好今天天今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好今天天气真好
+        </div>
+    </div>
+    <div class="bottom">
+
+    </div>
+</body>
+</html>

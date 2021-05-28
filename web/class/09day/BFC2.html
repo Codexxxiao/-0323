@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 特性二：计算BFC高度的时候浮动元素也会跟着计算 -->
+    <title>特性三</title>
+    <style>
+        #div1{
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+        }
+        #div2{
+            /* 开启BFC */
+            /* 解决父级高度塌陷问题 */
+            overflow: hidden;
+            width: 500px;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+   
+    <div id="div2">
+        <div id="div1"></div>
+    </div>
+</body>
+</html>

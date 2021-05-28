@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单的制作</title>
+    <style>
+        #menu{
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            border: 1px solid black;
+            list-style-type: none;
+        }
+
+        #menu li{
+            height: 30px;
+            line-height: 30px;
+            /* border: 1px solid red; */
+        }
+        #menu li:hover .menu-inner{
+            display: block;
+        }
+        #menu li a{
+            text-decoration: none;
+            color: #333;
+        }
+
+        #menu .menu-inner{
+            /* 
+                absolute定位的时候，如果为设置高度，会根据
+                    top，bottom与包含块之间的上下边界距离
+                    自动设置高度。可以用来做菜单栏
+             */
+            position:absolute;
+            width: 300px;
+            left: 300px;
+            background-color: white;
+            border: 1px solid blue;
+            top: -1px;
+            bottom: -1px;
+
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>
+            <a href="#">菜单一</a>
+            <div class="menu-inner">菜单一-子菜单</div>
+        </li>
+        <li>
+            <a href="#">菜单二</a>
+            <div class="menu-inner">菜单二-子菜单</div>
+        </li>
+        <li>
+            <a href="#">菜单三</a>
+            <div class="menu-inner">菜单三-子菜单</div>
+        </li>
+        <li>
+            <a href="#">菜单四</a>
+            <div class="menu-inner">菜单四-子菜单</div>
+        </li>
+        <li>
+            <a href="#">菜单四</a>
+            <div class="menu-inner">菜单四-子菜单</div>
+        </li>
+        <li>
+            <a href="#">菜单四</a>
+            <div class="menu-inner">菜单四-子菜单</div>
+        </li>
+    </ul>
+</body>
+</html>

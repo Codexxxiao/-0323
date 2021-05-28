@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>line-height样式的使用</title>
+    <!-- 
+        line-height:
+            1.不设置块状元素的高度情况下，line-height会把盒子的高度撑得一样高
+            2.设置块状元素的高度的情况下，line-height不会把盒子撑开，只会改变文字高度
+            3.想让一行文字居中于当前元素，可以使line-height和height相等
+     -->
+    <style>
+        div {
+            width: 600px;
+            /* height: 600px; */
+            border: 1px solid red;
+            line-height: 600px;
+            background-color: yellow;
+            
+
+        }
+
+        span {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div><span>x</span>
+        <img src="../../1.png" alt="" style="width: 200px; height: 200px;">
+    </div>
+</body>
+
+</html>

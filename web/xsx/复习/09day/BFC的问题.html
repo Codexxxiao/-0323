@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC的问题演示</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: red;
+            
+        }
+        #div2{
+            /* 使用float创建新的BFC */
+            /* float: left; */
+            /* 使用overflow创建新的BFC;mei'y */
+            /* overflow: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+</body>
+</html>

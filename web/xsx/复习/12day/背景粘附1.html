@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景粘附2-scroll相对于元素固定</title>
+    <style>
+        /* #div1{
+            position: relative;
+            margin: 0 auto;
+            height: 600px;
+            width: 400px;
+            border: 1px solid red;
+            overflow: scroll;
+        }
+        #div2{
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            left: 50px;
+            top: 100px;
+            border: 1px solid green;
+            overflow: scroll;
+            background-image:url('./youpiao.jpg');
+            background-repeat:no-repeat;
+
+        }
+        #div3{
+            position:absolute;
+            width: 100px;
+            height: 200px;
+            border: 1px solid blue;
+            overflow: scroll;
+            left: 100px;
+            height: 100px;
+        } */
+        #div0{
+            background-image: url('./youpiao.jpg');
+            background-repeat:no-repeat;
+            background-attachment:local;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+    </div>
+    <!-- <div id="div1">
+        <div id="div2">
+            <div id="div3">
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+                <div>333</div>
+            </div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+            <div>111</div>
+        </div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+        <div>222</div>
+    </div> -->
+</body>
+</html>

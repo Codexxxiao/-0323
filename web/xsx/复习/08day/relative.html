@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- relative
+        块级元素和行内块级元素
+            1.相对于元素本来应该在的位置使用top left bottom right进行位移
+            2.元素原本的位置任然保留
+            3.虽然元素里面的内容显示在位移之后的区域里面，但是基线仍然是
+                按照元素本来的位置去计算
+            4.可以跟float一起使用（块级元素才能使用float） 
+        行内元素
+            1.相当于原来的位置进行位移
+            2.元素原本的位置保留
+            3.基线位置仍然按照原本位置的基线计算
+            4.仍然不能修改行内元素的宽度和高度
+
+    -->
+    <title>relative的使用</title>
+    <!-- 使用normalize.ccs 消除一些浏览器的基础样式 -->
+    <link rel="stylesheet" href="../../../normalize.css" type="text/css">
+    <style>
+        div{
+            margin: 10px;
+        }
+        #div0{
+            width: 300px;
+            /* 设置了边框，所以没出现父级塌陷的问题 */
+            border: 1px solid black;
+            /* display: inline-block; */
+        }
+        #div1{
+            float: right;
+            position:relative;
+            top: 50px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        #div2{
+            width: 100px;
+            height: 200px;
+            background-color: yellow;
+        }
+        #div3{
+            /* display: inline-block; */
+            width: 100px;
+            height: 300px;
+            background-color: blue;
+        }
+        #span1{
+            border: 1px solid red;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        }
+        #span2{
+            border:1px solid yellow;
+            position: relative;
+            width: 100px ;
+            top: -20px;
+            right: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+    <div id="div1">1231231231241231241242</div>
+    <div id="div2"></div>
+    </div>  
+    <div id="div3"></div>
+
+    <span id="span1">12312312</span>
+    <span id="span2">12312312</span>
+    <span >12312312</span>
+</body>
+</html>

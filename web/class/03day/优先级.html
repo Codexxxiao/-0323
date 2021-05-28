@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优先级的测试</title>
+    <!-- 
+        如图.box和.con 和 href="./01.css"的优先级是一样的
+        ，但是在后边书写的样式的优先级更高，相当于浏览器解析的时候在后边书写的
+        会重新覆盖在前面书写。
+    -->
+    <style type="text/css">
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .con{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./01.css">
+</head>
+<body>
+    <div class="box con show">
+        box
+    </div>
+</body>
+</html>

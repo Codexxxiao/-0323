@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧固定右侧自适应布局二</title>
+    <!-- 
+        使用position完成自适应布局
+     -->
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        #outer{
+            height: 100%;
+            background-color: rosybrown;
+        }
+        #outer #right{
+            height: 100%;
+            background-color: saddlebrown;
+
+            float: left;
+        }
+        #outer #left{
+            height: 100%;
+            width: 300px;
+            background-color: slategray;
+            /* 核心代码一 */
+            float: left;
+            margin-left: -100%;
+        }
+        #outer #right #c{
+            /* 核心代码二 */
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="right">
+            <div id="c">Officiis blanditiis rerum doloribus porro perspiciatis sit voluptas. Perspiciatis ad non et quo et est. Voluptates voluptas optio et fuga. Placeat molestias labore voluptates temporibus est tempora dolores.
+ 
+Consequatur suscipit nam soluta suscipit rem error repellendus consequatur numquam. Tempore omnis quaerat incidunt eligendi nihil aut et vel. Debitis tempora voluptatem.
+ 
+Dolorem explicabo voluptate ipsam. Et dolorem at nemo cumque facere dolores iste. Architecto ratione voluptatem perspiciatis. Quibusdam sed ut quod reiciendis iure placeat rem earum. Veritatis asperiores amet nemo ad rem doloremque.</div>
+        </div>
+        <div id="left"></div>
+    </div>
+</body>
+</html>

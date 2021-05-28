@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation-timing-function中step的用法</title>
+    <!-- 默认的动画效果都有过渡的感觉，使用steps直接从一帧跳跃到另外一帧 -->
+    <!-- 使用steps设置图片步数，可以制作出有背景图片构成的gif动画效果 -->
+    <style>
+        div{
+            width: 56px;
+            height: 100px;
+            background-image: url('./dancer.png');
+            background-repeat: no-repeat;
+            margin: 50px;
+            animation: dance 4s steps(22) infinite;
+        }
+        @keyframes dance{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1229px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

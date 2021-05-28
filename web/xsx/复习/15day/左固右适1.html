@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧固定右侧自适应布局一</title>
+    <!-- 
+        使用position完成布局：
+     -->
+    <style> 
+        html,body{
+            height: 100%;
+            margin: 0;
+        }
+        #outer{
+            position: relative;
+            height: 100%;
+            background-color: rosybrown;
+        }
+        #outer #left{
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            background-color: silver;
+        }
+        #outer #right{
+            /* 
+                right宽度和高度由top,bottom,left,right等于0设置
+            */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: red;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="left"></div>
+        <div id="right">Autem cupiditate magni omnis possimus repellendus. In laborum quis ut dolor. Quas qui voluptatum delectus in sequi.
+ 
+Rerum ab non deserunt dignissimos qui. Rerum quae consequatur saepe. Aperiam voluptas facilis cum ipsam consequatur explicabo deserunt earum placeat.
+ 
+Ut ut nobis illo sed adipisci. Consequatur eligendi quisquam et id reprehenderit ipsum maiores culpa. Quisquam et laborum ad nam quis quos. Nobis nam ex architecto.</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin属性的使用</title>
+    <style>
+        .con1,.con2{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        
+        .con1{
+            /*
+                margin:后面跟两位数，分别代表上下 左右
+                        后面跟一位数，代表上下左右
+                    取值方式：px（像素大小）
+                            百分比（相对父级元素宽和高的百分比）
+                            
+              */
+            margin: 10% 10%;
+        }
+        /* 
+        margin: 0 auto;使块状元素相对当前页面水平居中
+         */
+         /* 
+        margin: auto 0;无法产生竖直居中的效果
+        原因：块状元素在竖直方向没有满屏的属性，表现出来的情况是元素多高
+            就分配多高属性，因此没有额外的空白空间去分配。
+          */
+        .con2{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="con1"></div>
+    <div class="con2"></div>
+</body>
+</html>

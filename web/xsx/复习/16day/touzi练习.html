@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>骰子练习</title>
+    <style>
+        #touzi{
+            width: 500px;
+            height: 400px;
+            border: 1px solid red;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #touzi>div{
+            width: 150px;
+            height: 150px;
+            border: 1px solid green;
+
+            display: flex;
+        }
+
+        /* 设置骰子点 */
+        .red,.blue{
+            width: 50px;
+            height: 50px;
+            border: 1px solid gray;
+            border-radius: 50%;
+        }
+        .red{
+            background-image: radial-gradient( silver,black);
+        }
+        .blue{
+            background-image: radial-gradient(gold,black);
+        }
+
+        /* 设置第一个 */
+        #t1{
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 设置第二个 */
+        #t2{
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        /* 设置第三个 */
+        #t3{
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #t3 div:nth-of-type(2){
+            align-self: center;
+        }
+        #t3 div:nth-of-type(3){
+            align-self: flex-end;
+        }
+
+        /* 设置第四个,五个，六个 */
+        #t4,#t5,#t6{
+            justify-content: space-around;
+        }
+        #t4>.column,#t5>.column,#t6>.column{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        /* 设置第五个中中间的点 */
+        #t5>div:nth-of-type(2){
+            /* 方法一：使用position：absolute使其脱离文档流 */
+            /* flex布局中尽量不出现position和float布局 */
+            position: absolute;
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="touzi">
+        <div id="t1">
+            <div class="red"></div>
+        </div>
+
+        <div id="t2">
+            <div class="blue"></div>
+            <div class="blue"></div>
+        </div>
+
+        <div id="t3">
+            <div class="blue"></div>
+            <div class="blue"></div>
+            <div class="blue"></div>
+        </div>
+
+        <div id="t4">
+            <div class="column">
+                <div class="red"></div>
+                <div class="red"></div>
+            </div>
+            <div class="column">
+                <div class="red"></div>
+                <div class="red"></div>
+            </div>
+        </div>
+
+        <div id="t5">
+            <div class="column">
+                <div class="blue"></div>
+                <div class="blue"></div>
+            </div>
+            <div class="blue"></div>
+            <div class="column">
+                <div class="blue"></div>
+                <div class="blue"></div>
+            </div>
+        </div>
+
+        <div id="t6">
+            <div class="column">
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+            </div>
+            <div class="column">
+                <div class="blue"></div>
+                <div class="blue"></div>
+                <div class="blue"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

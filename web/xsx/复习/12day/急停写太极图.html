@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用急停写太极图</title>
+    <style>
+        div{
+            position:relative;
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid black;
+            background-image: linear-gradient(to right,black 0%,black 50%,white 50%,white 100%);
+            border-radius:50%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+        }
+        div::before,div::after{
+            position:absolute;
+            content: "";
+            width: 200px;
+            height: 200px;
+            left: 100px;
+            border-radius:50%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+        }
+        div::before{
+            top: 0px;
+            background-color: black;
+            background-image: radial-gradient(10px at 50% 50%,white 0px,white 10px,black);
+        }
+        div::after{
+            bottom: 0px;
+            background-color: white;
+            background-image:radial-gradient(10px at 50% 50%,black 0px,black 10px,white)
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

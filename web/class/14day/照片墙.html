@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <!-- 
+        transform:rotate(deg)
+            ：正值，按照正值方向旋转
+            ：负值，按照负值方向旋转
+     -->
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+            margin: 0;
+        }
+        ul{
+            position: relative;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            background-color: #e9e9e9;
+        }
+        ul li{
+            position: absolute;
+            padding: 10px;
+            width: 200px;
+            background-color: white;
+            box-shadow: 4px 4px 2px #ccc;
+            transition-property: transform,boxshadow;
+            transition-duration: 1s;
+        }
+        ul li:hover{
+            z-index: 1 !important;
+            transform: rotate(0deg) scale(1.3) !important;
+            box-shadow: 10px 10px 10px #ccc;
+            
+        }
+        ul li img{
+            width: 100%;
+        }
+        ul li:nth-child(1){
+            left: 100px;
+            top: 100px;
+            transform: rotate(-45deg);
+        }
+        ul li:nth-child(2){
+            left: 400px;
+            top: 300px;
+            transform: rotate(45deg);
+        }
+        ul li:nth-child(3){
+            width: 100px;
+            left: 600px;
+            top: 300px;
+            transform: rotate(-320deg);
+        }
+        ul li:nth-child(4){
+            width: 200px;
+            left: 800px;
+            top: 500px;
+            transform: rotate(-10deg);
+        }
+        ul li:nth-child(5){
+            width: 300px;
+            left: 800px;
+            top: 600px;
+            transform: rotate(30deg);
+        }
+        ul li:nth-child(6){
+            width: 200px;
+            left: 800px;
+            top: 300px;
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><img src="./0955cf751bf74cf7986c9f1d5b2fe26b.jpg" alt=""></li>
+        <li><img src="./33d5549585dd4c9eac5213332b8b9501.jpg" alt=""></li>
+        <li><img src="./3638f61d8a1d4ea0b5e2e3b180353c6a.jpg" alt=""></li>
+        <li><img src="./434c3e1b28bb46f89c680981ba5fc8a0.jpg" alt=""></li>
+        <li><img src="./45b48ab655714975ac4c9cc7ae20a064.jpg" alt=""></li>
+        <li><img src="./5a0d5a3521a3402f94fa824d700e1749.jpg" alt=""></li>
+    </ul>
+</body>
+</html>

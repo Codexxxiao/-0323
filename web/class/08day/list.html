@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有序和无序列表的标识区域和内容区域</title>
+    <style>
+        /* 
+            使用列表的时候，默认格式会自动有一个右内边距看似用来
+            存放标识区域，但是标识区域其实不参与布局，把右内边距设置
+            为零的话，标识就会被挤到页面外面
+         */
+        ol{
+            display: inline-block;
+            border: 1px solid red;
+            /* 
+                使用list-style-position用来确定标识的位置
+                    outside:把标识放在标识区域，不参与页面布局
+                    inside：把标识房子啊内容区域，参与页面布局
+             */
+            /* list-style-position: inside; */
+
+            /* 
+                使用list-style-type:来设置标识的样式
+                    none:为没有标识
+                    有序列表被设置为none时不阻断有序列表计算
+             */
+            list-style-type: georgian;
+
+            /* 使用自定义图片样式来替换标识 */
+            list-style-image: url('../../1.png');   
+            /* 
+            当样式type和image同时存在时，有图片优先使用图片
+                没有图片才使用type
+             */
+
+            /* list-style合写
+                list-style:position img type;
+                 */
+             list-style: inside url('../../1.png') georgian;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ol>
+</body>
+</html>

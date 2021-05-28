@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>交集选择器</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .list li{
+            width: 30px;
+            height: 30px;
+            border: 1px solid #000;
+            margin: 30px;
+            border-radius: 50%;
+            background-color: pink;
+        }
+        /* 交集选择器，
+            li.active其中第一个必须是标签名选择器，第二个必须是类别选择器或者id
+            选择器，两个选择器之间不能空格必须连写
+            其结果是两者各自元素之间的交集，相同属性得话以类别选择器或id选择器为优先
+             */
+        .list li.active{
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <ul class="list">
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+</body>
+</html>

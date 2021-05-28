@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex练习</title>
+    <style>
+        #div0{
+            width: 910px;
+            height: 700px;
+            border: 1px solid red;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+
+        #div0 .div1{
+            width: 300px;
+            height: 300px;
+            border: 1px solid green;
+
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #div0 .div1>div{
+            width: 100px;
+            height: 100px;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        #div0 .div1:nth-child(3)>div{
+            box-sizing: border-box;
+        }
+        #div0 .div1:nth-child(3)>div:nth-child(1){
+            align-self: flex-start;
+        }
+        #div0 .div1:nth-child(3)>div:nth-child(3){
+            align-self: flex-end;
+        }
+        #div0 .div1:nth-child(4){
+            flex-flow: row wrap;
+            align-content: center; 
+        }
+        #div0 .div1:nth-child(4)>div{
+            height: 150px;
+            width: 150px;
+        }
+        #div0 .div1:nth-child(5)>div{
+            height: 150px;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+       
+        #div0 .div1:nth-child(5)>div:nth-child(3){
+            position: absolute;
+            height: 300px;
+            width: 80px;
+        }
+        #div0 .div1:nth-child(6)>div{         
+            box-sizing: border-box;
+        }
+
+        #div0 .div1:nth-child(1)>div::after,#div0 .div1:nth-child(4)>div::after{
+            content: '';
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-image: radial-gradient(red,black);
+        }
+        #div0 .div1:nth-child(2)>div::after,#div0 .div1:nth-child(3)>div::after,#div0 .div1:nth-child(5)>div::after,#div0 .div1:nth-child(6)>div::after{
+            content: '';
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-image: radial-gradient(blue,black);
+        }
+
+        #div0 .div1:nth-child(5)>div:nth-child(1),  #div0 .div1:nth-child(5)>div:nth-child(2){
+            justify-content: flex-end ;
+        }
+        #div0 .div1:nth-child(5)>div:nth-child(4),  #div0 .div1:nth-child(5)>div:nth-child(5){
+            justify-content: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div id="div0">
+        <div class="div1"><div></div></div>
+        <div class="div1">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="div1">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="div1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="div1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="div1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

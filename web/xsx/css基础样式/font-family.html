@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font-family基础样式</title>
+    <style type="text/css">
+    /* 使用@font-face来引入外部字体包
+        url属性里为引入地址
+     */
+        @font-face {
+            font-family: "../../1.png";
+            src: url("../../1.png");
+        }
+        .box{
+            /* 常见的中文字体 */
+            font-family: "Microsoft Yhei";
+            /* font-family: "SimSun"; */
+            /* font-family: "SimHei";
+            font-family: "SimHei","SimSun","Microsoft YaHei"; */
+
+            /* font-family: serif; *//* 衬线字体族  */
+          /*   font-family: sans-serif; *//* 无衬线字体族 */
+           /*  font-family: cursive; *//* 手写体族 */
+          /*   font-family: monospace; *//* 等宽字体族 */
+           /*  font-family: fantasy; *//* 梦幻字体族 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        hahah哈哈哈
+        <span>笑个鬼</span>
+    </div>
+</body>
+</html>

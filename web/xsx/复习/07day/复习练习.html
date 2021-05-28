@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习边框的使用</title>
+    <style>
+        /* 设置body的margin和背景颜色 */
+        body{
+            margin: 0px;
+            background-color: #f4f4f4;
+        }
+        /* 设置最外层div */
+        #outer{
+            width: 192px;
+            height: 240px;
+            border: 1px solid red;
+            font-size: 0px;
+            background-color: white;
+        }
+        /* 设置相对单个div */
+        #outer .div1{
+            display: inline-block;
+            width: 64px;
+            height: 55px;
+            /* border: 1px solid black; */
+            margin-top: 5px;
+
+            text-align: center;
+            box-sizing: border-box;
+        }
+        /* 设置话费的图片和字体 */
+        #outer .div1 #huafei{
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            /* border: 1px solid green; */
+
+            background-image: url('./img.png');
+            background-repeat: no-repeat;
+            background-position: -168px;
+        }
+        #outer .div1 span{
+            display: inline-block;
+            width:64px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 12px;
+        }
+        /* 给文字设置hover */
+        #outer .div1:hover span{
+            color: red;
+        }
+
+        /* 
+            给图片设置hover
+         */
+         #outer .div1:hover #huafei{
+             background-position: -420px;
+         }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+        <div class="div1">
+            <div id="huafei"></div>
+            <span>话费</span>
+        </div>
+    </div>
+</body>
+</html>
